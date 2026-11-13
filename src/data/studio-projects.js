@@ -1,8 +1,4 @@
 export const studioProjects=[
-  {id:'andorinha-completa',label:'Andorinha · Embarcação completa'},
-  {id:'andorinha-proa',label:'Andorinha · Proa (Parte A)'},
-  {id:'andorinha-popa',label:'Andorinha · Popa e Cabine (Parte B)'},
-  {id:'andorinha-cabine',label:'Andorinha · Cabine e Galeria isolada'},
   {id:'bamboo',label:'Casa de Bambu'},
   {id:'bamboo-tower',label:'Casa de Bambu · estudo da torre'},
   {id:'portal-1.0.3',label:'Portal Escarlate · 1.0.3 · Fachada original'},

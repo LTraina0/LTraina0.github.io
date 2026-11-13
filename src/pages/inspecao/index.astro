@@ -3,7 +3,6 @@ import {inspectionProjects} from '../../../architect/inspection.mjs';
 ---
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><title>Inspeção pública · BuildsMine</title><meta name="description" content="Catálogo textual e dados públicos das construções do BuildsMine, sem JavaScript ou WebGL."/></head><body>
 <main><h1>Inspeção pública do BuildsMine</h1><p>Os dados e resumos desta área podem ser lidos por clientes HTTP e navegadores sem WebGL. Os links por caminho identificam um projeto antes da execução de JavaScript.</p>
-<h2>Projeto Andorinha</h2><p><a href="/andorinha/">Embarcação, mastros, velas e galeria</a></p>
 <h2>Projetos com ficha de inspeção</h2><ul>{inspectionProjects.map(p=><li><a href={'/inspecao/'+p.id}>{p.label}</a></li>)}</ul>
 <p><a href="/inspecao/catalogo.json">Catálogo JSON com todos os estudos</a> · <a href="/inspecao/diagnostico.json">Descrição técnica pública</a> · <a href="/modelos/release.json">Commit e hashes dos estudos</a> · <a href="/">Estúdio 3D</a></p>
 <h2>Dados construtivos</h2><p>Os modelos do Ateliê usam o formato buildsmine.cells/1. Cada grupo de quatro números em cells descreve X, Y, Z e o índice em dictionary. A entrada correspondente de dictionary fornece ID Bedrock, estados e módulo. header contém parâmetros, limites, materiais e etapas. Os modelos anteriores usam uma lista blocks.</p>
