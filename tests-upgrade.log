@@ -1,0 +1,498 @@
+TAP version 13
+# Subtest: Cada estudo disponibilizado mantém todas as células e metadados no transporte
+ok 1 - Cada estudo disponibilizado mantém todas as células e metadados no transporte
+  ---
+  duration_ms: 14098.5867
+  type: 'test'
+  ...
+# Subtest: A paleta conserva a geometria por célula e os pináculos encaixam no bloco portador
+ok 2 - A paleta conserva a geometria por célula e os pináculos encaixam no bloco portador
+  ---
+  duration_ms: 83.3251
+  type: 'test'
+  ...
+# Subtest: Validação composta rejeita colisão, estado, gravidade e contato ausente
+ok 3 - Validação composta rejeita colisão, estado, gravidade e contato ausente
+  ---
+  duration_ms: 137.5664
+  type: 'test'
+  ...
+# Subtest: O agente chama a CLI fora do site e transforma os encaixes junto com o modelo
+ok 4 - O agente chama a CLI fora do site e transforma os encaixes junto com o modelo
+  ---
+  duration_ms: 1400.9743
+  type: 'test'
+  ...
+# Subtest: Todos os 18 modelos do estúdio têm juntas, frente, cobertura e inventário válidos
+ok 5 - Todos os 18 modelos do estúdio têm juntas, frente, cobertura e inventário válidos
+  ---
+  duration_ms: 1013.102
+  type: 'test'
+  ...
+# Subtest: Escala e parâmetros válidos nos limites e em um perfil intermediário
+ok 6 - Escala e parâmetros válidos nos limites e em um perfil intermediário
+  ---
+  duration_ms: 458.7541
+  type: 'test'
+  ...
+# Subtest: Variações têm consequências mensuráveis no cume, nos cantos e na paleta
+ok 7 - Variações têm consequências mensuráveis no cume, nos cantos e na paleta
+  ---
+  duration_ms: 141.9758
+  type: 'test'
+  ...
+# Subtest: Transformações do módulo assimétrico e dos 15 blocos restauram coordenadas e estados
+ok 8 - Transformações do módulo assimétrico e dos 15 blocos restauram coordenadas e estados
+  ---
+  duration_ms: 128.6358
+  type: 'test'
+  ...
+# Subtest: Fixtures corrompidas são rejeitadas mesmo com totais e limites recalculados
+ok 9 - Fixtures corrompidas são rejeitadas mesmo com totais e limites recalculados
+  ---
+  duration_ms: 475.0244
+  type: 'test'
+  ...
+# Subtest: approved west layout preserves source cells except the recorded roof join
+ok 10 - approved west layout preserves source cells except the recorded roof join
+  ---
+  duration_ms: 132.072
+  type: 'test'
+  ...
+# Subtest: long bridge retains 36-cell length, integer cells, floor continuity, frame rhythm and one threshold
+ok 11 - long bridge retains 36-cell length, integer cells, floor continuity, frame rhythm and one threshold
+  ---
+  duration_ms: 51.2495
+  type: 'test'
+  ...
+# Subtest: the approved layout refuses unsupported bridge sides and bamboo relocation
+ok 12 - the approved layout refuses unsupported bridge sides and bamboo relocation
+  ---
+  duration_ms: 1.3214
+  type: 'test'
+  ...
+# Subtest: all final source and generated state values stay in the curated official Bedrock domains
+ok 13 - all final source and generated state values stay in the curated official Bedrock domains
+  ---
+  duration_ms: 55.4902
+  type: 'test'
+  ...
+# Subtest: bridge rotation carries stair, trapdoor, wall and fence connection states with the cells
+ok 14 - bridge rotation carries stair, trapdoor, wall and fence connection states with the cells
+  ---
+  duration_ms: 4.2494
+  type: 'test'
+  ...
+# Subtest: 24 saved green cushion entities retain positions and rest on the two stair rings
+ok 15 - 24 saved green cushion entities retain positions and rest on the two stair rings
+  ---
+  duration_ms: 56.7711
+  type: 'test'
+  ...
+# Subtest: west roof join matches the rotated front roof including saved states
+ok 16 - west roof join matches the rotated front roof including saved states
+  ---
+  duration_ms: 54.8381
+  type: 'test'
+  ...
+# Subtest: tower 40 blocks, bridge centered and passage open
+ok 17 - tower 40 blocks, bridge centered and passage open
+  ---
+  duration_ms: 6.5345
+  type: 'test'
+  ...
+# Subtest: original house and all original cushions preserved
+ok 18 - original house and all original cushions preserved
+  ---
+  duration_ms: 7.3538
+  type: 'test'
+  ...
+# Subtest: bridge floor remains continuous for 36 cells
+ok 19 - bridge floor remains continuous for 36 cells
+  ---
+  duration_ms: 0.3898
+  type: 'test'
+  ...
+# Subtest: continuous shaft follows the upper-room footprint without outer frames
+ok 20 - continuous shaft follows the upper-room footprint without outer frames
+  ---
+  duration_ms: 3.0981
+  type: 'test'
+  ...
+# 6 verificações de propagação/oclusão passaram
+# Subtest: tests\\block-light.test.mjs
+ok 5 - tests\\block-light.test.mjs
+  ---
+  duration_ms: 375.3284
+  type: 'test'
+  ...
+# Subtest: Fachada combina motores com peças conectadas, estados corretos e seis construções determinísticas
+ok 22 - Fachada combina motores com peças conectadas, estados corretos e seis construções determinísticas
+  ---
+  duration_ms: 2290.1722
+  type: 'test'
+  ...
+# Subtest: Contexto depende de abrigo, função e forma; a distribuição experimental conserva os encaixes
+ok 23 - Contexto depende de abrigo, função e forma; a distribuição experimental conserva os encaixes
+  ---
+  duration_ms: 263.4515
+  type: 'test'
+  ...
+# Subtest: Peças e fachada preservam contato e estados sob quatro rotações e espelhos
+ok 24 - Peças e fachada preservam contato e estados sob quatro rotações e espelhos
+  ---
+  duration_ms: 283.5024
+  type: 'test'
+  ...
+# Subtest: Auditoria e validador deixam limites explícitos e rejeitam remoção de apoios
+ok 25 - Auditoria e validador deixam limites explícitos e rejeitam remoção de apoios
+  ---
+  duration_ms: 99.4065
+  type: 'test'
+  ...
+# Subtest: 0.2 · todas as combinações do estúdio mantêm cobertura e contato físico em cada etapa
+ok 26 - 0.2 · todas as combinações do estúdio mantêm cobertura e contato físico em cada etapa
+  ---
+  duration_ms: 1827.3802
+  type: 'test'
+  ...
+# Subtest: 0.2 · tipologias têm topologias distintas, cumeeiras contínuas e isolamento dos dois níveis
+ok 27 - 0.2 · tipologias têm topologias distintas, cumeeiras contínuas e isolamento dos dois níveis
+  ---
+  duration_ms: 56.4543
+  type: 'test'
+  ...
+# Subtest: 0.2 · rotação e espelhamento conservam a geometria e os estados das duas fachadas e quatro cantos
+ok 28 - 0.2 · rotação e espelhamento conservam a geometria e os estados das duas fachadas e quatro cantos
+  ---
+  duration_ms: 211.8699
+  type: 'test'
+  ...
+# Subtest: 0.2 · resolução de meio bloco reduz erro médio e máximo nas duas escalas testadas
+ok 29 - 0.2 · resolução de meio bloco reduz erro médio e máximo nas duas escalas testadas
+  ---
+  duration_ms: 15.7977
+  type: 'test'
+  ...
+# Subtest: 0.2 · parâmetros alteram o objeto físico e validam a interação entre estações, seção e frente
+ok 30 - 0.2 · parâmetros alteram o objeto físico e validam a interação entre estações, seção e frente
+  ---
+  duration_ms: 136.268
+  type: 'test'
+  ...
+# Subtest: 0.2 · validador rejeita interseções, furos, orientação, volumes e peças sem apoio
+ok 31 - 0.2 · validador rejeita interseções, furos, orientação, volumes e peças sem apoio
+  ---
+  duration_ms: 108.6305
+  type: 'test'
+  ...
+# Subtest: Kits têm volume, pontos de conexão, estados válidos e materiais derivados em cada transformação
+ok 32 - Kits têm volume, pontos de conexão, estados válidos e materiais derivados em cada transformação
+  ---
+  duration_ms: 107.0592
+  type: 'test'
+  ...
+# Subtest: Vãos maiores aumentam o espaço útil sem esticar a bigorna
+ok 33 - Vãos maiores aumentam o espaço útil sem esticar a bigorna
+  ---
+  duration_ms: 5.5565
+  type: 'test'
+  ...
+# Subtest: Estados direcionais novos e ligações do muro acompanham rotação e espelho
+ok 34 - Estados direcionais novos e ligações do muro acompanham rotação e espelho
+  ---
+  duration_ms: 1.5575
+  type: 'test'
+  ...
+# Subtest: Posições inválidas falham sem simular colisão, transferência de itens ou iluminação
+ok 35 - Posições inválidas falham sem simular colisão, transferência de itens ou iluminação
+  ---
+  duration_ms: 6.5026
+  type: 'test'
+  ...
+# Subtest: Aro do funil e do caldeirão deixam espaço vazio; luz usa UV da haste e bigorna tem topo orientado
+ok 36 - Aro do funil e do caldeirão deixam espaço vazio; luz usa UV da haste e bigorna tem topo orientado
+  ---
+  duration_ms: 31.7164
+  type: 'test'
+  ...
+# Subtest: Uma peça conectada após a fratura · hull
+ok 37 - Uma peça conectada após a fratura · hull
+  ---
+  duration_ms: 965.307
+  type: 'test'
+  ...
+# Subtest: Uma peça conectada após a fratura · breach
+ok 38 - Uma peça conectada após a fratura · breach
+  ---
+  duration_ms: 563.6404
+  type: 'test'
+  ...
+# Subtest: Uma peça conectada após a fratura · deck
+ok 39 - Uma peça conectada após a fratura · deck
+  ---
+  duration_ms: 174.5513
+  type: 'test'
+  ...
+# Subtest: IDs e domínios compatíveis com o 0.1; estatísticas por face contêm tons e granulação
+ok 40 - IDs e domínios compatíveis com o 0.1; estatísticas por face contêm tons e granulação
+  ---
+  duration_ms: 8.6372
+  type: 'test'
+  ...
+# Subtest: Métricas de painel separam contraste global e repetição local
+ok 41 - Métricas de painel separam contraste global e repetição local
+  ---
+  duration_ms: 11.4005
+  type: 'test'
+  ...
+# Subtest: Quatro rampas têm luminância crescente; os cinco padrões distintos só intercalam paradas vizinhas
+ok 42 - Quatro rampas têm luminância crescente; os cinco padrões distintos só intercalam paradas vizinhas
+  ---
+  duration_ms: 55.12
+  type: 'test'
+  ...
+# Subtest: Gradiente novo liga extremos de entrada, respeita a lista elegível e aceita trocas de textura
+ok 43 - Gradiente novo liga extremos de entrada, respeita a lista elegível e aceita trocas de textura
+  ---
+  duration_ms: 2.9315
+  type: 'test'
+  ...
+# Subtest: Recomendação considera função, família, harmonia e face; agrupamento aproxima forma de mesma superfície
+ok 44 - Recomendação considera função, família, harmonia e face; agrupamento aproxima forma de mesma superfície
+  ---
+  duration_ms: 6.1905
+  type: 'test'
+  ...
+# Subtest: Acabamento mantém estados, posições, etapas, blocos de kit e o núcleo original
+ok 45 - Acabamento mantém estados, posições, etapas, blocos de kit e o núcleo original
+  ---
+  duration_ms: 90.3385
+  type: 'test'
+  ...
+# Subtest: O cenário preserva integralmente a Andorinha aprovada e a procedência do painel
+ok 46 - O cenário preserva integralmente a Andorinha aprovada e a procedência do painel
+  ---
+  duration_ms: 769.5324
+  type: 'test'
+  ...
+# Subtest: As células ambientais usam IDs e estados reais sem sobrepor o casco
+ok 47 - As células ambientais usam IDs e estados reais sem sobrepor o casco
+  ---
+  duration_ms: 92.0574
+  type: 'test'
+  ...
+# Subtest: O transporte público mantém as células navais e os módulos ambientais
+ok 48 - O transporte público mantém as células navais e os módulos ambientais
+  ---
+  duration_ms: 383.2544
+  type: 'test'
+  ...
+# {"cells":89842,"environment":85521,"materials":37,"modules":23,"packetBytes":3697438,"generatedMs":1516}
+# Subtest: Os percursos apoiam-se em pisos reais e mantêm dois blocos de altura livre
+ok 49 - Os percursos apoiam-se em pisos reais e mantêm dois blocos de altura livre
+  ---
+  duration_ms: 10.5085
+  type: 'test'
+  ...
+# Subtest: A neve ambiental assenta sobre a face superior real do bloco de apoio
+ok 50 - A neve ambiental assenta sobre a face superior real do bloco de apoio
+  ---
+  duration_ms: 15.6602
+  type: 'test'
+  ...
+# Subtest: A B C permanecem byte a byte iguais aos pacotes congelados 0.2.1
+ok 51 - A B C permanecem byte a byte iguais aos pacotes congelados 0.2.1
+  ---
+  duration_ms: 899.4357
+  type: 'test'
+  ...
+# Subtest: O detector reproduz a abertura de meio bloco 0.2.1 e o fechamento superior ausente
+ok 52 - O detector reproduz a abertura de meio bloco 0.2.1 e o fechamento superior ausente
+  ---
+  duration_ms: 1078.2491
+  type: 'test'
+  ...
+# Subtest: Cotas mantêm encontros fechados sob 1 a 3 camadas, espessuras e alturas
+ok 53 - Cotas mantêm encontros fechados sob 1 a 3 camadas, espessuras e alturas
+  ---
+  duration_ms: 9218.7744
+  type: 'test'
+  ...
+# Subtest: Retirada da fiada, meias peças incorretas e obstrução do acesso falham
+ok 54 - Retirada da fiada, meias peças incorretas e obstrução do acesso falham
+  ---
+  duration_ms: 646.0155
+  type: 'test'
+  ...
+# Subtest: Paletas preservam coordenadas estados e formas, com justificativas recalculáveis
+ok 55 - Paletas preservam coordenadas estados e formas, com justificativas recalculáveis
+  ---
+  duration_ms: 753.4722
+  type: 'test'
+  ...
+# Subtest: Transformações transportam estados, planos de fechamento e volumes livres
+ok 56 - Transformações transportam estados, planos de fechamento e volumes livres
+  ---
+  duration_ms: 751.5057
+  type: 'test'
+  ...
+# Subtest: A sombra aproximada distingue uma laje de uma folha vertical na mesma célula
+ok 57 - A sombra aproximada distingue uma laje de uma folha vertical na mesma célula
+  ---
+  duration_ms: 2.1241
+  type: 'test'
+  ...
+# Subtest: Escadas e cantos orientam o patamar alto e eliminam faces sobrepostas
+ok 58 - Escadas e cantos orientam o patamar alto e eliminam faces sobrepostas
+  ---
+  duration_ms: 106.0728
+  type: 'test'
+  ...
+# Subtest: Alçapões ocupam a parede de dobradiça e mantêm três pixels de espessura
+ok 59 - Alçapões ocupam a parede de dobradiça e mantêm três pixels de espessura
+  ---
+  duration_ms: 7.1799
+  type: 'test'
+  ...
+# Subtest: Eixo do tronco transporta os topos e a fibra com a geometria
+ok 60 - Eixo do tronco transporta os topos e a fibra com a geometria
+  ---
+  duration_ms: 1.7039
+  type: 'test'
+  ...
+# Subtest: Lajes recortam metade do sprite na lateral sem esticar os pixels
+ok 61 - Lajes recortam metade do sprite na lateral sem esticar os pixels
+  ---
+  duration_ms: 2.6305
+  type: 'test'
+  ...
+# Subtest: Exposição naval considera o recobrimento real de lajes e folhas parciais
+ok 62 - Exposição naval considera o recobrimento real de lajes e folhas parciais
+  ---
+  duration_ms: 6.1383
+  type: 'test'
+  ...
+# Subtest: Os 202 estudos anteriores permanecem idênticos à publicação 14
+ok 63 - Os 202 estudos anteriores permanecem idênticos à publicação 14
+  ---
+  duration_ms: 9693.2447
+  type: 'test'
+  ...
+# Subtest: Três implantações e dois acabamentos têm apoio por etapa, cabine e três percursos livres
+ok 64 - Três implantações e dois acabamentos têm apoio por etapa, cabine e três percursos livres
+  ---
+  duration_ms: 1356.8347
+  type: 'test'
+  ...
+# Subtest: Perfis de casco compartilham cotas e abrem progressivamente do fundo ao bojo
+ok 65 - Perfis de casco compartilham cotas e abrem progressivamente do fundo ao bojo
+  ---
+  duration_ms: 0.5972
+  type: 'test'
+  ...
+# Subtest: Validador detecta rota bloqueada, piso removido, porta incoerente e razão material adulterada
+ok 66 - Validador detecta rota bloqueada, piso removido, porta incoerente e razão material adulterada
+  ---
+  duration_ms: 514.7588
+  type: 'test'
+  ...
+# Subtest: Acabamento muda IDs mantendo coordenadas, estados, módulos e formas reais
+ok 67 - Acabamento muda IDs mantendo coordenadas, estados, módulos e formas reais
+  ---
+  duration_ms: 442.833
+  type: 'test'
+  ...
+# Subtest: Rotações e espelhos transportam formas, estados, portas e os percursos do navio
+ok 68 - Rotações e espelhos transportam formas, estados, portas e os percursos do navio
+  ---
+  duration_ms: 837.6548
+  type: 'test'
+  ...
+# Subtest: IDs, domínios e texturas navais têm curadoria oficial seletiva sem Preview
+ok 69 - IDs, domínios e texturas navais têm curadoria oficial seletiva sem Preview
+  ---
+  duration_ms: 2.6977
+  type: 'test'
+  ...
+# Subtest: Tampo de barril acompanha as seis orientações e as UVs das peças especiais ficam no sprite
+ok 70 - Tampo de barril acompanha as seis orientações e as UVs das peças especiais ficam no sprite
+  ---
+  duration_ms: 16.4146
+  type: 'test'
+  ...
+# Subtest: A revisão cabe no envelope, conserva as cavernas, o teto e a escada da v18
+ok 71 - A revisão cabe no envelope, conserva as cavernas, o teto e a escada da v18
+  ---
+  duration_ms: 25.2245
+  type: 'test'
+  ...
+# Subtest: O relevo muda nas três regiões mesmo com o material oculto
+ok 72 - O relevo muda nas três regiões mesmo com o material oculto
+  ---
+  duration_ms: 28.7829
+  type: 'test'
+  ...
+# Subtest: Faixas minerais contornam a janela e o costado, com madeira aparente nos encaixes
+ok 73 - Faixas minerais contornam a janela e o costado, com madeira aparente nos encaixes
+  ---
+  duration_ms: 5.8783
+  type: 'test'
+  ...
+# Subtest: A avaria expõe o vau e o costado, com passagem, vidro e inventário preservados nos três estados
+ok 74 - A avaria expõe o vau e o costado, com passagem, vidro e inventário preservados nos três estados
+  ---
+  duration_ms: 4.5925
+  type: 'test'
+  ...
+# Subtest: A inversão do painel transportado recompõe todas as células, os estados e os contatos
+ok 75 - A inversão do painel transportado recompõe todas as células, os estados e os contatos
+  ---
+  duration_ms: 723.8418
+  type: 'test'
+  ...
+# Subtest: A quilha, as cavernas, os vaus e o forro permanecem nas estações de origem
+ok 76 - A quilha, as cavernas, os vaus e o forro permanecem nas estações de origem
+  ---
+  duration_ms: 313.7888
+  type: 'test'
+  ...
+# Subtest: A passagem tem dois blocos de largura, altura livre e desembarque nos dois extremos
+ok 77 - A passagem tem dois blocos de largura, altura livre e desembarque nos dois extremos
+  ---
+  duration_ms: 1.9697
+  type: 'test'
+  ...
+# Subtest: Biqueiras drenam o bordo e os aparelhos têm apoio, espaço e procedência
+ok 78 - Biqueiras drenam o bordo e os aparelhos têm apoio, espaço e procedência
+  ---
+  duration_ms: 16.5569
+  type: 'test'
+  ...
+# Subtest: Remontagem das peças exportadas recupera estados, materiais e contatos. Uma dobradiça trocada reprova
+ok 79 - Remontagem das peças exportadas recupera estados, materiais e contatos. Uma dobradiça trocada reprova
+  ---
+  duration_ms: 1208.0434
+  type: 'test'
+  ...
+# Subtest: Abertura, membros, grão, escadas e contatos remontam o casco publicado
+ok 80 - Abertura, membros, grão, escadas e contatos remontam o casco publicado
+  ---
+  duration_ms: 1325.8531
+  type: 'test'
+  ...
+# Subtest: Uma fibra trocada depois da separação reprova a remontagem
+ok 81 - Uma fibra trocada depois da separação reprova a remontagem
+  ---
+  duration_ms: 530.9065
+  type: 'test'
+  ...
+1..81
+# tests 81
+# suites 0
+# pass 81
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16041.4424
