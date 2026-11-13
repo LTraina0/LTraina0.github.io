@@ -1,0 +1,1072 @@
+{
+  "version": "v1.26.60.5",
+  "installedPackageVersion": "1.26.6301.0",
+  "auditDate": "2026-11-11",
+  "inGameChecked": false,
+  "entries": {
+    "minecraft:spruce_planks": {
+      "label": "Tábuas de Abeto",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/planks_spruce.png",
+        "up": "textures/blocks/planks_spruce.png",
+        "down": "textures/blocks/planks_spruce.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_stairs": {
+      "label": "Escadas de Abeto",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_spruce.png",
+        "up": "textures/blocks/planks_spruce.png",
+        "down": "textures/blocks/planks_spruce.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_slab": {
+      "label": "Laje de Abeto",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_spruce.png",
+        "up": "textures/blocks/planks_spruce.png",
+        "down": "textures/blocks/planks_spruce.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_trapdoor": {
+      "label": "Alçapão de Abeto",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/spruce_trapdoor.png",
+        "up": "textures/blocks/spruce_trapdoor.png",
+        "down": "textures/blocks/spruce_trapdoor.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_log": {
+      "label": "Tora de Abeto",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/log_spruce.png",
+        "up": "textures/blocks/log_spruce_top.png",
+        "down": "textures/blocks/log_spruce_top.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:dark_oak_planks": {
+      "label": "Tábuas de Carvalho escuro",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/planks_big_oak.png",
+        "up": "textures/blocks/planks_big_oak.png",
+        "down": "textures/blocks/planks_big_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:dark_oak_stairs": {
+      "label": "Escadas de Carvalho escuro",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_big_oak.png",
+        "up": "textures/blocks/planks_big_oak.png",
+        "down": "textures/blocks/planks_big_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:dark_oak_slab": {
+      "label": "Laje de Carvalho escuro",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_big_oak.png",
+        "up": "textures/blocks/planks_big_oak.png",
+        "down": "textures/blocks/planks_big_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:dark_oak_trapdoor": {
+      "label": "Alçapão de Carvalho escuro",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/dark_oak_trapdoor.png",
+        "up": "textures/blocks/dark_oak_trapdoor.png",
+        "down": "textures/blocks/dark_oak_trapdoor.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:dark_oak_log": {
+      "label": "Tora de Carvalho escuro",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/log_big_oak.png",
+        "up": "textures/blocks/log_big_oak_top.png",
+        "down": "textures/blocks/log_big_oak_top.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:oak_planks": {
+      "label": "Tábuas de Carvalho",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/planks_oak.png",
+        "up": "textures/blocks/planks_oak.png",
+        "down": "textures/blocks/planks_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:oak_stairs": {
+      "label": "Escadas de Carvalho",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_oak.png",
+        "up": "textures/blocks/planks_oak.png",
+        "down": "textures/blocks/planks_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:oak_slab": {
+      "label": "Laje de Carvalho",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_oak.png",
+        "up": "textures/blocks/planks_oak.png",
+        "down": "textures/blocks/planks_oak.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:trapdoor": {
+      "label": "Alçapão de Carvalho",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/trapdoor.png",
+        "up": "textures/blocks/trapdoor.png",
+        "down": "textures/blocks/trapdoor.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:oak_log": {
+      "label": "Tora de Carvalho",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/log_oak.png",
+        "up": "textures/blocks/log_oak_top.png",
+        "down": "textures/blocks/log_oak_top.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:stripped_spruce_log": {
+      "label": "Tora de abeto descascada",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/stripped_spruce_log.png",
+        "up": "textures/blocks/stripped_spruce_log_top.png",
+        "down": "textures/blocks/stripped_spruce_log_top.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_fence": {
+      "label": "Cerca de abeto",
+      "shape": "naval-fence",
+      "officialStates": {
+        "minecraft:connection_east": [
+          false,
+          true
+        ],
+        "minecraft:connection_north": [
+          false,
+          true
+        ],
+        "minecraft:connection_south": [
+          false,
+          true
+        ],
+        "minecraft:connection_west": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/planks_spruce.png",
+        "up": "textures/blocks/planks_spruce.png",
+        "down": "textures/blocks/planks_spruce.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:barrel": {
+      "label": "Barril",
+      "shape": "naval-barrel",
+      "officialStates": {
+        "facing_direction": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/barrel_side.png",
+        "up": "textures/blocks/barrel_side.png",
+        "down": "textures/blocks/barrel_side.png",
+        "front": "textures/blocks/barrel_top.png",
+        "open": "textures/blocks/barrel_top_open.png",
+        "back": "textures/blocks/barrel_bottom.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:lantern": {
+      "label": "Lanterna",
+      "shape": "naval-lantern",
+      "officialStates": {
+        "hanging": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/lantern.png",
+        "up": "textures/blocks/lantern.png",
+        "down": "textures/blocks/lantern.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:iron_chain": {
+      "label": "Corrente de ferro",
+      "shape": "naval-chain",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/chain1.png",
+        "up": "textures/blocks/chain1.png",
+        "down": "textures/blocks/chain1.png",
+        "alternate": "textures/blocks/chain2.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:spruce_door": {
+      "label": "Porta de abeto",
+      "shape": "naval-door",
+      "officialStates": {
+        "door_hinge_bit": [
+          false,
+          true
+        ],
+        "minecraft:cardinal_direction": [
+          "south",
+          "west",
+          "north",
+          "east"
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upper_block_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/door_spruce_lower.png",
+        "up": "textures/blocks/door_spruce_lower.png",
+        "down": "textures/blocks/door_spruce_lower.png",
+        "upper": "textures/blocks/door_spruce_upper.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:snow_layer": {
+      "label": "Camada de neve",
+      "shape": "naval-snow",
+      "officialStates": {
+        "height": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "covered_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/snow.png",
+        "up": "textures/blocks/snow.png",
+        "down": "textures/blocks/snow.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "native height domain 0..7; preview box height 2*(height+1) sixteenths",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A"
+    },
+    "minecraft:packed_ice": {
+      "label": "Gelo compactado",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/ice_packed.png",
+        "up": "textures/blocks/ice_packed.png",
+        "down": "textures/blocks/ice_packed.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A"
+    },
+    "minecraft:blue_ice": {
+      "label": "Gelo azul",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/blue_ice.png",
+        "up": "textures/blocks/blue_ice.png",
+        "down": "textures/blocks/blue_ice.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A"
+    },
+    "minecraft:snow": {
+      "label": "Neve",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/snow.png",
+        "up": "textures/blocks/snow.png",
+        "down": "textures/blocks/snow.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A"
+    },
+    "minecraft:white_wool": {
+      "label": "Lã branca",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/wool_colored_white.png",
+        "up": "textures/blocks/wool_colored_white.png",
+        "down": "textures/blocks/wool_colored_white.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:black_wool": {
+      "label": "Lã preta",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/wool_colored_black.png",
+        "up": "textures/blocks/wool_colored_black.png",
+        "down": "textures/blocks/wool_colored_black.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:light_gray_wool": {
+      "label": "Lã cinza-clara",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/wool_colored_silver.png",
+        "up": "textures/blocks/wool_colored_silver.png",
+        "down": "textures/blocks/wool_colored_silver.png"
+      },
+      "availability": "stable vanilla selection; no experimental families",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "inGameChecked": false,
+      "geometryEvidence": "canonical native cells; special visual recipes documented in naval-assets.js; in-game pending"
+    },
+    "minecraft:pale_oak_planks": {
+      "label": "Tábuas de carvalho pálido",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/pale_oak_planks.png",
+        "up": "textures/blocks/pale_oak_planks.png",
+        "down": "textures/blocks/pale_oak_planks.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:pale_oak_stairs": {
+      "label": "Escadas de carvalho pálido",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/pale_oak_planks.png",
+        "up": "textures/blocks/pale_oak_planks.png",
+        "down": "textures/blocks/pale_oak_planks.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:pale_oak_slab": {
+      "label": "Laje de carvalho pálido",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/pale_oak_planks.png",
+        "up": "textures/blocks/pale_oak_planks.png",
+        "down": "textures/blocks/pale_oak_planks.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:pale_oak_log": {
+      "label": "Tora de carvalho pálido",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/pale_oak_log_side.png",
+        "up": "textures/blocks/pale_oak_log_top.png",
+        "down": "textures/blocks/pale_oak_log_top.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:stripped_pale_oak_log": {
+      "label": "Tora de carvalho pálido descascada",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/stripped_pale_oak_log_side.png",
+        "up": "textures/blocks/stripped_pale_oak_log_top.png",
+        "down": "textures/blocks/stripped_pale_oak_log_top.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:iron_trapdoor": {
+      "label": "Alçapão de ferro",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/iron_trapdoor.png",
+        "up": "textures/blocks/iron_trapdoor.png",
+        "down": "textures/blocks/iron_trapdoor.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:brown_stained_glass": {
+      "label": "Vidro tingido de marrom",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/glass_brown.png",
+        "up": "textures/blocks/glass_brown.png",
+        "down": "textures/blocks/glass_brown.png"
+      },
+      "availability": "stable vanilla selection",
+      "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+      "inGameChecked": false,
+      "geometryEvidence": "Preview solids and visible face contacts; no in-game check"
+    },
+    "minecraft:stone": {
+      "label": "Pedra",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/stone.png",
+        "up": "textures/blocks/stone.png",
+        "down": "textures/blocks/stone.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:andesite": {
+      "label": "Andesito",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/stone_andesite.png",
+        "up": "textures/blocks/stone_andesite.png",
+        "down": "textures/blocks/stone_andesite.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:andesite_stairs": {
+      "label": "Escadas de andesito",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/stone_andesite.png",
+        "up": "textures/blocks/stone_andesite.png",
+        "down": "textures/blocks/stone_andesite.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native corner, upside_down_bit and weirdo_direction domains; existing preview stair recipe"
+    },
+    "minecraft:andesite_slab": {
+      "label": "Laje de andesito",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "side": "textures/blocks/stone_andesite.png",
+        "up": "textures/blocks/stone_andesite.png",
+        "down": "textures/blocks/stone_andesite.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native vertical_half domain bottom/top; existing half-cell recipe"
+    },
+    "minecraft:cobblestone": {
+      "label": "Pedregulho",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/cobblestone.png",
+        "up": "textures/blocks/cobblestone.png",
+        "down": "textures/blocks/cobblestone.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:cobbled_deepslate": {
+      "label": "Pedregulho de ardósia",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/deepslate/cobbled_deepslate.png",
+        "up": "textures/blocks/deepslate/cobbled_deepslate.png",
+        "down": "textures/blocks/deepslate/cobbled_deepslate.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:ice": {
+      "label": "Gelo",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "side": "textures/blocks/ice.png",
+        "up": "textures/blocks/ice.png",
+        "down": "textures/blocks/ice.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces",
+      "transparency": "native PNG alpha, rendered by existing translucent material; no fluid simulation or melting test"
+    },
+    "minecraft:calcite": {
+      "label": "Calcita",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "down": "textures/blocks/calcite.png",
+        "side": "textures/blocks/calcite.png",
+        "up": "textures/blocks/calcite.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:stone_bricks": {
+      "label": "Tijolos de Pedra",
+      "shape": "cube",
+      "officialStates": {},
+      "textures": {
+        "down": "textures/blocks/stonebrick.png",
+        "side": "textures/blocks/stonebrick.png",
+        "up": "textures/blocks/stonebrick.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native full cell, unscaled; tagged texture for all faces"
+    },
+    "minecraft:stone_brick_stairs": {
+      "label": "Escada de Tijolos de Pedra",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "textures": {
+        "down": "textures/blocks/stonebrick.png",
+        "side": "textures/blocks/stonebrick.png",
+        "up": "textures/blocks/stonebrick.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native corner, upside_down_bit and weirdo_direction domains; existing preview stair recipe"
+    },
+    "minecraft:stone_brick_slab": {
+      "label": "Laje de Tijolos de Pedra",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "textures": {
+        "down": "textures/blocks/stonebrick.png",
+        "side": "textures/blocks/stonebrick.png",
+        "up": "textures/blocks/stonebrick.png"
+      },
+      "availability": "established stable vanilla family selected for Bedrock; no Preview geometry",
+      "source": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+      "metadataSources": [
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+        "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+      ],
+      "metadataChecked": "2026-11-11",
+      "spriteHTTP": 200,
+      "spriteSignature": "PNG 89504E470D0A1A0A",
+      "inGameChecked": false,
+      "geometryEvidence": "native vertical_half domain bottom/top; existing half-cell recipe"
+    }
+  }
+}

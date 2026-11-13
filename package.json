@@ -1,0 +1,1 @@
+{"name":"casa-bambu-estudio","private":true,"version":"0.1.0","type":"module","scripts":{"dev":"astro dev --host 127.0.0.1","build":"astro build","check":"astro check"},"dependencies":{"astro":"^5.15.0","three":"^0.180.0"}}

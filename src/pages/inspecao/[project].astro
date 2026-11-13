@@ -1,0 +1,13 @@
+---
+import {inspectionProjects,inspectProject} from '../../../architect/inspection.mjs';
+export function getStaticPaths(){return inspectionProjects.map(project=>({params:{project:project.id},props:{project}}));}
+const p=inspectProject(Astro.props.project);
+---
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><title>{p.label} · Inspeção BuildsMine</title><meta name="description" content={'Dados construtivos públicos de '+p.label+', disponíveis sem JavaScript ou WebGL.'}/><link rel="alternate" type="application/json" href={'/inspecao/dados/'+p.id+'.json'}/></head>
+<body><header><a href="/inspecao/">Catálogo de inspeção BuildsMine</a></header><main><h1>{p.label}</h1><p>{p.blocks} blocos · {Object.keys(p.materials).length} materiais. Esta página é gerada a partir dos dados construtivos usados no visualizador.</p>
+<p><a href={p.data}>Modelo construtivo completo em JSON</a> · <a href={'/inspecao/dados/'+p.id+'.json'}>Resumo estruturado</a> · <a href="/modelos/release.json">Versão e hashes</a></p>
+<h2>Materiais e estados presentes</h2><table><thead><tr><th>Identificador Bedrock</th><th>Quantidade</th><th>Estados observados no projeto</th></tr></thead><tbody>{Object.entries(p.materials).map(([id,n])=><tr><td><code>{id}</code></td><td>{n}</td><td><code>{JSON.stringify(p.states[id])}</code></td></tr>)}</tbody></table>
+<h2>Módulos</h2><ul>{Object.entries(p.modules).map(([id,n])=><li><code>{id}</code> · {n} blocos</li>)}</ul>
+<h2>Parâmetros e limites de validação</h2><pre>{JSON.stringify({parameters:p.parameters,bounds:p.bounds,validation:p.validation},null,2)}</pre>
+<h2>Amostra de células</h2><pre>{JSON.stringify(p.sample,null,2)}</pre><p>O JSON completo contém todas as células. O registro de estados identifica os valores usados pelo projeto.</p>
+</main></body></html>

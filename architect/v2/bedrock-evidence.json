@@ -1,0 +1,6215 @@
+{
+  "target": "v1.26.60.5",
+  "installedPackageVersion": "1.26.6301.0",
+  "auditDate": "2026-11-11",
+  "inGameChecked": false,
+  "sourceRoot": "https://github.com/Mojang/bedrock-samples/tree/v1.26.60.5",
+  "entries": {
+    "minecraft:stripped_mangrove_log": {
+      "label": "Tora de Mangue Descascada",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "supportedStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stripped_mangrove_log_top.png",
+          "sha256": "3b2e7b148def9363d875e54389066a4299644360abefab986eee9289bea7da2e",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stripped_mangrove_log_side.png",
+          "sha256": "eb273c4fbec5561cd471f2df75daa979729d57bb6fed84cb5cf740653c678bac",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stripped_mangrove_log_top.png",
+          "sha256": "3b2e7b148def9363d875e54389066a4299644360abefab986eee9289bea7da2e",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:mangrove_planks": {
+      "label": "Tábuas de Mangue",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:mangrove_stairs": {
+      "label": "Escadas de Mangue",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:bamboo_planks": {
+      "label": "Tábuas de Bambu",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/bamboo_planks.png",
+          "sha256": "6d9fc3420292b099161d3e6077a5f3accc4bba7a940c473176bd6486a22d75e5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/bamboo_planks.png",
+          "sha256": "6d9fc3420292b099161d3e6077a5f3accc4bba7a940c473176bd6486a22d75e5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/bamboo_planks.png",
+          "sha256": "6d9fc3420292b099161d3e6077a5f3accc4bba7a940c473176bd6486a22d75e5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:bamboo_trapdoor": {
+      "label": "Alçapão de Bambu",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/bamboo_trapdoor.png",
+          "sha256": "6cb2d53a65479cc7228e4f1f2eefb6ee588563a9d1eb0b8f1eccbedabf03e84f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "side": {
+          "path": "textures/blocks/bamboo_trapdoor.png",
+          "sha256": "6cb2d53a65479cc7228e4f1f2eefb6ee588563a9d1eb0b8f1eccbedabf03e84f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "up": {
+          "path": "textures/blocks/bamboo_trapdoor.png",
+          "sha256": "6cb2d53a65479cc7228e4f1f2eefb6ee588563a9d1eb0b8f1eccbedabf03e84f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "opening": "open_bit can change through interaction or redstone"
+      }
+    },
+    "minecraft:deepslate_bricks": {
+      "label": "Tijolos de Ardosiabissal",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:deepslate_brick_stairs": {
+      "label": "Escadas de Tijolos de Ardosiabissal",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:deepslate_brick_slab": {
+      "label": "Laje de Tijolos de Ardosiabissal",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/deepslate/deepslate_bricks.png",
+          "sha256": "746261351e513a039f9694ecc6483300b22ec32f1f775d3451284f399815a8be",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_blackstone_bricks": {
+      "label": "Tijolos de Pedra-Negra Polida",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_blackstone_brick_stairs": {
+      "label": "Escadas de Tijolos de Pedra-Negra Polida",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:polished_blackstone_brick_slab": {
+      "label": "Laje de Tijolos de Pedra-Negra Polida",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+      "label": "Cobre Lapidado Oxidado Encerado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_oxidized_cut_copper_stairs": {
+      "label": "Escada de Cobre Lapidado Oxidado Encerado",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs",
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+      "label": "Laje de Cobre Lapidado Oxidado Encerado",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/oxidized_cut_copper.png",
+          "sha256": "ea5fb99d461914caad9a832c460f94c102ce8d66528e9049e3ad9b3fd31009b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_cut_copper": {
+      "label": "Cobre Lapidado Encerado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:amethyst_block": {
+      "label": "Bloco de Ametista",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/amethyst_block.png",
+          "sha256": "dfb74da859b6945a662cd9abe60a0ba2e68c53c362dd552dc1008f99cc2fb10a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/amethyst_block.png",
+          "sha256": "dfb74da859b6945a662cd9abe60a0ba2e68c53c362dd552dc1008f99cc2fb10a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/amethyst_block.png",
+          "sha256": "dfb74da859b6945a662cd9abe60a0ba2e68c53c362dd552dc1008f99cc2fb10a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:blue_terracotta": {
+      "label": "Terracota Azul",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_blue.png",
+          "sha256": "5e509b197761f7702ec3b9af14ede9381bac63c88ce09c0a41b9fe80bd759202",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_blue.png",
+          "sha256": "5e509b197761f7702ec3b9af14ede9381bac63c88ce09c0a41b9fe80bd759202",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_blue.png",
+          "sha256": "5e509b197761f7702ec3b9af14ede9381bac63c88ce09c0a41b9fe80bd759202",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:brick_block": {
+      "label": "Tijolos",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:brick_slab": {
+      "label": "Laje de Tijolos",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:brick_stairs": {
+      "label": "Escada de Tijolos",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/brick.png",
+          "sha256": "64c5b9359bde9161adcba45890afc2f140183cac4bf468a37fdfe9bc2a596e7f",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:calcite": {
+      "label": "Calcita",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/calcite.png",
+          "sha256": "efa1b62c77c00c1e8f33baa394eb028cc16fc170dc6dcf9abc3c70805f516979",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/calcite.png",
+          "sha256": "efa1b62c77c00c1e8f33baa394eb028cc16fc170dc6dcf9abc3c70805f516979",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/calcite.png",
+          "sha256": "efa1b62c77c00c1e8f33baa394eb028cc16fc170dc6dcf9abc3c70805f516979",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:cherry_planks": {
+      "label": "Tábuas de Cerejeira",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:cherry_slab": {
+      "label": "Laje de Cerejeira",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:cherry_stairs": {
+      "label": "Escadas de Cerejeira",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cherry_planks.png",
+          "sha256": "399275a98d5fa99604286b40e4c754c589ae5672b3b9cd426d24463004aa1172",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:cherry_trapdoor": {
+      "label": "Alçapão de Cerejeira",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cherry_trapdoor.png",
+          "sha256": "33712dbc7582274c3a0dadd7bc1032788b00d1dc4af6e99537ee3268530c2138",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "side": {
+          "path": "textures/blocks/cherry_trapdoor.png",
+          "sha256": "33712dbc7582274c3a0dadd7bc1032788b00d1dc4af6e99537ee3268530c2138",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "up": {
+          "path": "textures/blocks/cherry_trapdoor.png",
+          "sha256": "33712dbc7582274c3a0dadd7bc1032788b00d1dc4af6e99537ee3268530c2138",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "opening": "open_bit can change through interaction or redstone"
+      }
+    },
+    "minecraft:chiseled_tuff_bricks": {
+      "label": "Tijolos de Tufo Cinzelados",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/chiseled_tuff_bricks_top.png",
+          "sha256": "57842051d38040374056ff781436d23a6397e7f46a39836dc7e02896266bde10",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/chiseled_tuff_bricks.png",
+          "sha256": "fbf5e685213634a1e18f56cf2c2b500d0b0c0dd6e2a1a3a34b1e7895ff4e53e5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/chiseled_tuff_bricks_top.png",
+          "sha256": "57842051d38040374056ff781436d23a6397e7f46a39836dc7e02896266bde10",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:cut_sandstone": {
+      "label": "Arenito Lapidado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/sandstone_top.png",
+          "sha256": "045f391bd5b2fb86d80f62c293517ed33932ec32ec14af5ad8f2a35bf4136a29",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/sandstone_smooth.png",
+          "sha256": "efa6f49d94690ab0cccfa48cef9acbbb59d8c5e6fa33cc371f82d80fb3121495",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/sandstone_top.png",
+          "sha256": "045f391bd5b2fb86d80f62c293517ed33932ec32ec14af5ad8f2a35bf4136a29",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:dark_prismarine": {
+      "label": "Prismarinho Escuro",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:dark_prismarine_slab": {
+      "label": "Laje de Prismarinho Escuro",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:dark_prismarine_stairs": {
+      "label": "Escadas de Prismarinho Escuro",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_dark.png",
+          "sha256": "c6d7ee8d88c09fca264dd6f0532d22d40a517de8337fb1d4e4173b51ef96c29d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:glowstone": {
+      "label": "Pedra Luminosa",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/glowstone.png",
+          "sha256": "d3ba8bcae6a3b6e45374527ae5f3a5cd8d59288d209c892d0347ede78ab8474d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/glowstone.png",
+          "sha256": "d3ba8bcae6a3b6e45374527ae5f3a5cd8d59288d209c892d0347ede78ab8474d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/glowstone.png",
+          "sha256": "d3ba8bcae6a3b6e45374527ae5f3a5cd8d59288d209c892d0347ede78ab8474d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:granite": {
+      "label": "Granito",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stone_granite.png",
+          "sha256": "69297e3f820c2f7655bb132d901663b3f338b35b493d7af071823f04ed8d1533",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stone_granite.png",
+          "sha256": "69297e3f820c2f7655bb132d901663b3f338b35b493d7af071823f04ed8d1533",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stone_granite.png",
+          "sha256": "69297e3f820c2f7655bb132d901663b3f338b35b493d7af071823f04ed8d1533",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:honeycomb_block": {
+      "label": "Bloco de Favo de Mel",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/honeycomb.png",
+          "sha256": "28c96e68ff884688a7717ad4bab4ca437807d5d57127d2206917bd8ecfc68b34",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/honeycomb.png",
+          "sha256": "28c96e68ff884688a7717ad4bab4ca437807d5d57127d2206917bd8ecfc68b34",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/honeycomb.png",
+          "sha256": "28c96e68ff884688a7717ad4bab4ca437807d5d57127d2206917bd8ecfc68b34",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:light_blue_concrete": {
+      "label": "Concreto Azul-claro",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/concrete_light_blue.png",
+          "sha256": "3f26c5ee694098f168e62f0003ea2dc30d5fee9a1e24c770f8da9d2167fcbae6",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/concrete_light_blue.png",
+          "sha256": "3f26c5ee694098f168e62f0003ea2dc30d5fee9a1e24c770f8da9d2167fcbae6",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/concrete_light_blue.png",
+          "sha256": "3f26c5ee694098f168e62f0003ea2dc30d5fee9a1e24c770f8da9d2167fcbae6",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:magenta_terracotta": {
+      "label": "Terracota Magenta",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_magenta.png",
+          "sha256": "cabb48ea5f7d2437fac94ac61b46cef8d35ba44cb2f87252972b39caec25c6ba",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_magenta.png",
+          "sha256": "cabb48ea5f7d2437fac94ac61b46cef8d35ba44cb2f87252972b39caec25c6ba",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_magenta.png",
+          "sha256": "cabb48ea5f7d2437fac94ac61b46cef8d35ba44cb2f87252972b39caec25c6ba",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:mangrove_slab": {
+      "label": "Laje de Mangue",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/mangrove_planks.png",
+          "sha256": "582c70c05e03e16c2e19289cc0f5358fd595c66d3c8ab513fe12f6e6b592ccaa",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:moss_block": {
+      "label": "Bloco de Musgo",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/moss_block.png",
+          "sha256": "0556f3d0f2ee7407e7d6761dd1f75cca330a83f5c19a506200531cec8a531052",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/moss_block.png",
+          "sha256": "0556f3d0f2ee7407e7d6761dd1f75cca330a83f5c19a506200531cec8a531052",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/moss_block.png",
+          "sha256": "0556f3d0f2ee7407e7d6761dd1f75cca330a83f5c19a506200531cec8a531052",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:nether_brick": {
+      "label": "Tijolos do Nether",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:nether_brick_slab": {
+      "label": "Laje de Tijolos do Nether",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:nether_brick_stairs": {
+      "label": "Escada de Tijolos do Nether",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/nether_brick.png",
+          "sha256": "1b6c79a09656ff9384d96f027bfe4110da9f0467cc08f56164310d4146a62713",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:orange_terracotta": {
+      "label": "Terracota Laranja",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_orange.png",
+          "sha256": "2d7b05e4e4c61a276fe2dfb8e9278e64b165bd479d0f558893abe225690e5ce4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_orange.png",
+          "sha256": "2d7b05e4e4c61a276fe2dfb8e9278e64b165bd479d0f558893abe225690e5ce4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_orange.png",
+          "sha256": "2d7b05e4e4c61a276fe2dfb8e9278e64b165bd479d0f558893abe225690e5ce4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:packed_mud": {
+      "label": "Lama Endurecida",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/packed_mud.png",
+          "sha256": "418ee652f3073e948f3752e8e5797618476b16df353770e08e1154688ad692bc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/packed_mud.png",
+          "sha256": "418ee652f3073e948f3752e8e5797618476b16df353770e08e1154688ad692bc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/packed_mud.png",
+          "sha256": "418ee652f3073e948f3752e8e5797618476b16df353770e08e1154688ad692bc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:pink_terracotta": {
+      "label": "Terracota Rosa",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_pink.png",
+          "sha256": "3c5d2cb4071aaea6730f6c43e46048deacd10ea630f668a869bfee36e561c263",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_pink.png",
+          "sha256": "3c5d2cb4071aaea6730f6c43e46048deacd10ea630f668a869bfee36e561c263",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_pink.png",
+          "sha256": "3c5d2cb4071aaea6730f6c43e46048deacd10ea630f668a869bfee36e561c263",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:pink_wool": {
+      "label": "Lã Rosa",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/wool_colored_pink.png",
+          "sha256": "1fcff6a37f96c15e52d2a9899ed2dcb63d971bc6118fac1bdd97f1e65d3a5164",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/wool_colored_pink.png",
+          "sha256": "1fcff6a37f96c15e52d2a9899ed2dcb63d971bc6118fac1bdd97f1e65d3a5164",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/wool_colored_pink.png",
+          "sha256": "1fcff6a37f96c15e52d2a9899ed2dcb63d971bc6118fac1bdd97f1e65d3a5164",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_tuff": {
+      "label": "Tufo Polido",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_tuff_slab": {
+      "label": "Laje de Tufo Polido",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_tuff_stairs": {
+      "label": "Escada de Tufo Polida",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_tuff.png",
+          "sha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:prismarine_brick_slab": {
+      "label": "Laje de Tijolos de Prismarinho",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:prismarine_bricks": {
+      "label": "Tijolos de Prismarinho",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:prismarine_bricks_stairs": {
+      "label": "Escada de Tijolos de Prismarinho",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/prismarine_bricks.png",
+          "sha256": "67f71e9f76efed243ac31f8adace2fd79b6b440914adc8cdb39a6280a581a552",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:purple_concrete": {
+      "label": "Concreto Roxo",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/concrete_purple.png",
+          "sha256": "230453fc027165bba8c86d8ae02aa1342f95f28a503436504c5a41aa1e53ac83",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/concrete_purple.png",
+          "sha256": "230453fc027165bba8c86d8ae02aa1342f95f28a503436504c5a41aa1e53ac83",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/concrete_purple.png",
+          "sha256": "230453fc027165bba8c86d8ae02aa1342f95f28a503436504c5a41aa1e53ac83",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:purple_terracotta": {
+      "label": "Terracota Roxa",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_purple.png",
+          "sha256": "85ddafeea4c1e40941870b0562d05bc4794deebe5dcb92266f0ed815211ef867",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_purple.png",
+          "sha256": "85ddafeea4c1e40941870b0562d05bc4794deebe5dcb92266f0ed815211ef867",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_purple.png",
+          "sha256": "85ddafeea4c1e40941870b0562d05bc4794deebe5dcb92266f0ed815211ef867",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:purple_wool": {
+      "label": "Lã Roxa",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/wool_colored_purple.png",
+          "sha256": "3afa856f3440967df8c6ad85030df293a34ee8852ee9c3518f92ca3626ba757a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/wool_colored_purple.png",
+          "sha256": "3afa856f3440967df8c6ad85030df293a34ee8852ee9c3518f92ca3626ba757a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/wool_colored_purple.png",
+          "sha256": "3afa856f3440967df8c6ad85030df293a34ee8852ee9c3518f92ca3626ba757a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:quartz_bricks": {
+      "label": "Tijolos de Quartzo",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/quartz_bricks.png",
+          "sha256": "dd652780b4bd7adf5e32d953367f46eb03dbb8f95c7bd7f8601a6bd2050fd239",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/quartz_bricks.png",
+          "sha256": "dd652780b4bd7adf5e32d953367f46eb03dbb8f95c7bd7f8601a6bd2050fd239",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/quartz_bricks.png",
+          "sha256": "dd652780b4bd7adf5e32d953367f46eb03dbb8f95c7bd7f8601a6bd2050fd239",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:raw_gold_block": {
+      "label": "Bloco de Ouro Bruto",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/raw_gold_block.png",
+          "sha256": "c8e22a9650cadc8f0819a95890911d9bc2f1f0d887ea6c0050c2d0b3f344dd13",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/raw_gold_block.png",
+          "sha256": "c8e22a9650cadc8f0819a95890911d9bc2f1f0d887ea6c0050c2d0b3f344dd13",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/raw_gold_block.png",
+          "sha256": "c8e22a9650cadc8f0819a95890911d9bc2f1f0d887ea6c0050c2d0b3f344dd13",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:red_nether_brick": {
+      "label": "Tijolos Vermelhos do Nether",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:red_nether_brick_slab": {
+      "label": "Laje de Tijolos Vermelhos do Nether",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:red_nether_brick_stairs": {
+      "label": "Escada de Tijolos Vermelhos do Nether",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/red_nether_brick.png",
+          "sha256": "3b1bc7e31ef255101a0faca3c9e4c2ba9e8b31241deb0fe1f4643ec8654510e4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:red_terracotta": {
+      "label": "Terracota Vermelha",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_red.png",
+          "sha256": "b7ca1d112e1e363ad310cea8141689fd1d3dd21bc7900079297e2ec3d0fbf5b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_red.png",
+          "sha256": "b7ca1d112e1e363ad310cea8141689fd1d3dd21bc7900079297e2ec3d0fbf5b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_red.png",
+          "sha256": "b7ca1d112e1e363ad310cea8141689fd1d3dd21bc7900079297e2ec3d0fbf5b0",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:spruce_planks": {
+      "label": "Tábuas de Pinheiro",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:spruce_slab": {
+      "label": "Laje de Pinheiro",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:spruce_stairs": {
+      "label": "Escada de Pinheiro",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/planks_spruce.png",
+          "sha256": "c3cdf25c69f94d1ec4e8e447610a220e493701a442aef85f21c4c14fce151eb8",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:spruce_trapdoor": {
+      "label": "Alçapão de Pinheiro",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/spruce_trapdoor.png",
+          "sha256": "9d7c47bea5630baf5d5af42d558b02274e1631d5888efcba18390537626ce6b4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/spruce_trapdoor.png",
+          "sha256": "9d7c47bea5630baf5d5af42d558b02274e1631d5888efcba18390537626ce6b4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/spruce_trapdoor.png",
+          "sha256": "9d7c47bea5630baf5d5af42d558b02274e1631d5888efcba18390537626ce6b4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "opening": "open_bit can change through interaction or redstone"
+      }
+    },
+    "minecraft:stone_brick_slab": {
+      "label": "Laje de Tijolos de Pedra",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:stone_brick_stairs": {
+      "label": "Escada de Tijolos de Pedra",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:stone_bricks": {
+      "label": "Tijolos de Pedra",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stonebrick.png",
+          "sha256": "10014eab68cbae15fd5c473845e703274b23576f906f32d2a3a4a652f9bdf596",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:stripped_cherry_log": {
+      "label": "Tora de Cerejeira Descascada",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "supportedStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stripped_cherry_log_top.png",
+          "sha256": "a6e16c4d1472290f68197e91a79184a94ebf876e1b6ee4724e3aeeaf59ce7b4a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stripped_cherry_log_side.png",
+          "sha256": "6ce94264762b8a2f72e65b0ff32e1f86dc65e3965da0582c55e442e27b18263d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stripped_cherry_log_top.png",
+          "sha256": "a6e16c4d1472290f68197e91a79184a94ebf876e1b6ee4724e3aeeaf59ce7b4a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:stripped_spruce_log": {
+      "label": "Tora de Pinheiro Descascada",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "supportedStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/stripped_spruce_log_top.png",
+          "sha256": "5e82d8d7dbabba73e12fee61e07d1371862c813a1743cd1fca2a7607bf4f334b",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/stripped_spruce_log.png",
+          "sha256": "fa53e3b555ca3a17da2e0e9ffd46cff2d0bc3cd3a5cf10a65a864a16bc7bd509",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/stripped_spruce_log_top.png",
+          "sha256": "5e82d8d7dbabba73e12fee61e07d1371862c813a1743cd1fca2a7607bf4f334b",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:stripped_warped_stem": {
+      "label": "Caule Distorcido Descascado",
+      "shape": "log",
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "supportedStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/huge_fungus/stripped_warped_stem_top.png",
+          "sha256": "49715be553b084c136f7a54f695d81b22bf71403ce66509ab1578591efb258ec",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/huge_fungus/stripped_warped_stem_side.png",
+          "sha256": "bfdba66a78d460198aad1874790a737e055a3b85ccdf7a6b46a144d4a4a8956d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/huge_fungus/stripped_warped_stem_top.png",
+          "sha256": "49715be553b084c136f7a54f695d81b22bf71403ce66509ab1578591efb258ec",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:tuff": {
+      "label": "Tufo",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:tuff_slab": {
+      "label": "Laje de Tufo",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:tuff_stairs": {
+      "label": "Escada de Tufo",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/tuff.png",
+          "sha256": "c6ca9c6ea6e8b9dec8a6b17c8ebbf4802494ba8f2816873ea795377e2eca3fc5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:warped_planks": {
+      "label": "Tábuas Distorcidas",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:warped_slab": {
+      "label": "Laje Distorcida",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:warped_stairs": {
+      "label": "Escadas Distorcidas",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/huge_fungus/warped_planks.png",
+          "sha256": "320a91841ff7111e9090c443f0189fff3ed8e8c383efd7a8f8c91f5f6693fd00",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs"
+      }
+    },
+    "minecraft:warped_trapdoor": {
+      "label": "Alçapão Distorcido",
+      "shape": "trapdoor",
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/huge_fungus/warped_trapdoor.png",
+          "sha256": "5f41f776c14fa16ccb12d607f5d86b2bb34d6dcd9275a5049959c7e03b1f41a1",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "side": {
+          "path": "textures/blocks/huge_fungus/warped_trapdoor.png",
+          "sha256": "5f41f776c14fa16ccb12d607f5d86b2bb34d6dcd9275a5049959c7e03b1f41a1",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "up": {
+          "path": "textures/blocks/huge_fungus/warped_trapdoor.png",
+          "sha256": "5f41f776c14fa16ccb12d607f5d86b2bb34d6dcd9275a5049959c7e03b1f41a1",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "opening": "open_bit can change through interaction or redstone"
+      }
+    },
+    "minecraft:waxed_chiseled_copper": {
+      "label": "Cobre Cinzelado Encerado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/chiseled_copper.png",
+          "sha256": "c47a941defa3854a22804f5f655998bb7889436d6d9b38560e2732c4fc6f352d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/chiseled_copper.png",
+          "sha256": "c47a941defa3854a22804f5f655998bb7889436d6d9b38560e2732c4fc6f352d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/chiseled_copper.png",
+          "sha256": "c47a941defa3854a22804f5f655998bb7889436d6d9b38560e2732c4fc6f352d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_cut_copper_slab": {
+      "label": "Laje de Cobre Lapidado Encerado",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_cut_copper_stairs": {
+      "label": "Escada de Cobre Lapidado Encerado",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cut_copper.png",
+          "sha256": "3fed363d2ddf1f7ed3405e20c2efcc70763c065307252645b9dbdbda12cc32dc",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs",
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+      "label": "Cobre Cinzelado Oxidado e Encerado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/oxidized_chiseled_copper.png",
+          "sha256": "7570e63d19c7889f837635d310697bc83aad2e5fde6ddb59ed439ffe5151268a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/oxidized_chiseled_copper.png",
+          "sha256": "7570e63d19c7889f837635d310697bc83aad2e5fde6ddb59ed439ffe5151268a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/oxidized_chiseled_copper.png",
+          "sha256": "7570e63d19c7889f837635d310697bc83aad2e5fde6ddb59ed439ffe5151268a",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+      "label": "Cobre Lapidado Desbotado Encerado",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+      "label": "Laje de Cobre Lapidado Desbotado Encerado",
+      "shape": "slab",
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:waxed_weathered_cut_copper_stairs": {
+      "label": "Escada de Cobre Lapidado Desbotado Encerado",
+      "shape": "stairs",
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "supportedStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/weathered_cut_copper.png",
+          "sha256": "e0bdcd3bb9ec483ebcf17184df6d1366ff89ec0c287749a0e71de931c2ef175d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "minecraft:corner depends on adjacent stairs",
+        "aging": "waxed variant is a compositional choice, exposure field does not simulate oxidation"
+      }
+    },
+    "minecraft:white_concrete": {
+      "label": "Concreto Branco",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/concrete_white.png",
+          "sha256": "6ad27d2fa69de165de0aca11f7906d4b3ff25aed635c16a81d4971ce3a93fe73",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/concrete_white.png",
+          "sha256": "6ad27d2fa69de165de0aca11f7906d4b3ff25aed635c16a81d4971ce3a93fe73",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/concrete_white.png",
+          "sha256": "6ad27d2fa69de165de0aca11f7906d4b3ff25aed635c16a81d4971ce3a93fe73",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:yellow_concrete": {
+      "label": "Concreto Amarelo",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/concrete_yellow.png",
+          "sha256": "df7631f475df4f768dc0a95bcc89a58e20fb826f58ea502a5c9cec6c9384b524",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/concrete_yellow.png",
+          "sha256": "df7631f475df4f768dc0a95bcc89a58e20fb826f58ea502a5c9cec6c9384b524",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/concrete_yellow.png",
+          "sha256": "df7631f475df4f768dc0a95bcc89a58e20fb826f58ea502a5c9cec6c9384b524",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:yellow_terracotta": {
+      "label": "Terracota Amarela",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "down": {
+          "path": "textures/blocks/hardened_clay_stained_yellow.png",
+          "sha256": "9a58331a3f4f0cc1f0d886510a11c62649b4ac20019e45a23b5ebf443c09e316",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "side": {
+          "path": "textures/blocks/hardened_clay_stained_yellow.png",
+          "sha256": "9a58331a3f4f0cc1f0d886510a11c62649b4ac20019e45a23b5ebf443c09e316",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hardened_clay_stained_yellow.png",
+          "sha256": "9a58331a3f4f0cc1f0d886510a11c62649b4ac20019e45a23b5ebf443c09e316",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:anvil": {
+      "label": "Bigorna",
+      "shape": "anvil",
+      "officialStates": {
+        "minecraft:cardinal_direction": [
+          "south",
+          "west",
+          "north",
+          "east"
+        ]
+      },
+      "supportedStates": {
+        "minecraft:cardinal_direction": [
+          "south",
+          "west",
+          "north",
+          "east"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/anvil_base.png",
+          "sha256": "a0aa900d064ba24cd1ea5f235c3553f5d6e8920f2438e2755fc89d357aa9f398",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/anvil_top_damaged_0.png",
+          "sha256": "de8580ab4c9ed4392fafebe83346514da3a8008714becbaca1a901eda026b2e5",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "down": {
+          "path": "textures/blocks/anvil_base.png",
+          "sha256": "a0aa900d064ba24cd1ea5f235c3553f5d6e8920f2438e2755fc89d357aa9f398",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "Java dimensional reference, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": true,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:cauldron": {
+      "label": "Caldeirão",
+      "shape": "cauldron",
+      "officialStates": {
+        "cauldron_liquid": [
+          "water",
+          "lava",
+          "powder_snow"
+        ],
+        "fill_level": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "supportedStates": {
+        "cauldron_liquid": [
+          "water",
+          "lava",
+          "powder_snow"
+        ],
+        "fill_level": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/cauldron_side.png",
+          "sha256": "c33e70cdb8c7f807f9fa0d8bcca3823db1696869c0c339dd424fd7b26363a3a4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/cauldron_top.png",
+          "sha256": "649303fd63b66f168343d18d1d246be79767f80c1dab8a43250aedcb506aac63",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "down": {
+          "path": "textures/blocks/cauldron_bottom.png",
+          "sha256": "8c4a4d9a7a3e908288a05bab781a77e2ae6ac4686f8b409fcf3985615396c3b4",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "inner": {
+          "path": "textures/blocks/cauldron_inner.png",
+          "sha256": "a1334424422f5bc55466be660bf01f167c8c061da27e724ea55ff3b5ed14b88d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "Java dimensional reference, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:hopper": {
+      "label": "Funil",
+      "shape": "hopper",
+      "officialStates": {
+        "facing_direction": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "toggle_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "facing_direction": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "toggle_bit": [
+          false,
+          true
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/hopper_outside.png",
+          "sha256": "d736dcb8cf8449be984bfe299ef514b41dfa0ad7e87a41bf48a546134f46340d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/hopper_top.png",
+          "sha256": "9865c7fd959ef2acaa9632547e3965d0717ee04a94e49cc9677202bbf0cbea79",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "down": {
+          "path": "textures/blocks/hopper_inside.png",
+          "sha256": "a1334424422f5bc55466be660bf01f167c8c061da27e724ea55ff3b5ed14b88d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "inner": {
+          "path": "textures/blocks/hopper_inside.png",
+          "sha256": "a1334424422f5bc55466be660bf01f167c8c061da27e724ea55ff3b5ed14b88d",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "Java dimensional reference, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:end_rod": {
+      "label": "Haste do End",
+      "shape": "end_rod",
+      "officialStates": {
+        "facing_direction": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "supportedStates": {
+        "facing_direction": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/end_rod.png",
+          "sha256": "94f20a6cd82eed61af0597d690f26411f83693ef943f2c0d31d9fa5a5721128e",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "up": {
+          "path": "textures/blocks/end_rod.png",
+          "sha256": "94f20a6cd82eed61af0597d690f26411f83693ef943f2c0d31d9fa5a5721128e",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        },
+        "down": {
+          "path": "textures/blocks/end_rod.png",
+          "sha256": "94f20a6cd82eed61af0597d690f26411f83693ef943f2c0d31d9fa5a5721128e",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            0,
+            255
+          ],
+          "hasTransparentPixels": true
+        }
+      },
+      "geometryEvidence": "Java dimensional reference, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    },
+    "minecraft:polished_blackstone_brick_wall": {
+      "label": "Muro de tijolos de pedra-negra polida",
+      "shape": "wall",
+      "officialStates": {
+        "wall_connection_type_east": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_north": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_south": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_west": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_post_bit": [
+          false,
+          true
+        ]
+      },
+      "supportedStates": {
+        "wall_post_bit": [
+          true,
+          false
+        ],
+        "wall_connection_type_north": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_east": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_south": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_west": [
+          "none",
+          "short",
+          "tall"
+        ]
+      },
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "down": {
+          "path": "textures/blocks/polished_blackstone_bricks.png",
+          "sha256": "f491807fe030f744eaf7e49b391ceba1efa2e05f786f29de6bea77712e340818",
+          "pixels": [
+            16,
+            16
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false,
+        "derivedState": "wall_post_bit and four connection types depend on neighbors"
+      }
+    },
+    "minecraft:sea_lantern": {
+      "label": "Lanterna do mar",
+      "shape": "cube",
+      "officialStates": {},
+      "supportedStates": {},
+      "stateSubsetVerified": true,
+      "textures": {
+        "side": {
+          "path": "textures/blocks/sea_lantern.png",
+          "sha256": "9af2dc225c18cedc7fa348c5c99fcfe905e04d2f58c02d8fdc30fb3e637ab942",
+          "pixels": [
+            16,
+            80
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "up": {
+          "path": "textures/blocks/sea_lantern.png",
+          "sha256": "9af2dc225c18cedc7fa348c5c99fcfe905e04d2f58c02d8fdc30fb3e637ab942",
+          "pixels": [
+            16,
+            80
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        },
+        "down": {
+          "path": "textures/blocks/sea_lantern.png",
+          "sha256": "9af2dc225c18cedc7fa348c5c99fcfe905e04d2f58c02d8fdc30fb3e637ab942",
+          "pixels": [
+            16,
+            80
+          ],
+          "alphaRange": [
+            255,
+            255
+          ],
+          "hasTransparentPixels": false
+        }
+      },
+      "geometryEvidence": "canonical block form, Bedrock mesh unmeasured",
+      "behavior": {
+        "gravity": false,
+        "fluidSimulation": "not-tested",
+        "neighborUpdates": "not-tested",
+        "inGameChecked": false
+      }
+    }
+  }
+}

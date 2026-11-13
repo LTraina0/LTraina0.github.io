@@ -1,0 +1,20 @@
+{
+  "default": "2.4.0",
+  "items": [
+    {
+      "id": "1.0.3",
+      "label": "1.0.3 · Fachada original",
+      "url": "/portal/versions/1.0.3.json"
+    },
+    {
+      "id": "2.3.0",
+      "label": "2.3.0 · Fachada · botões e circuito subterrâneo",
+      "url": "/portal/versions/2.3.0.json"
+    },
+    {
+      "id": "2.4.0",
+      "label": "2.4.0 · Pátio completo · fachada 2.3.0",
+      "url": "/portal/versions/2.4.0.json"
+    }
+  ]
+}

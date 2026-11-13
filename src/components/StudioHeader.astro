@@ -1,0 +1,31 @@
+---
+import {studioProjects} from '../data/studio-projects.js';
+const {active=''} = Astro.props;
+---
+<header>
+  <div>
+    <a class="studio-brand" href="/" aria-label="BuildsMine · início">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 10h16M9 5v14M15 10v9"/></svg></span>
+      <strong>BuildsMine</strong>
+    </a>
+    <span class="sub">Estúdio de construções</span>
+  </div>
+  <label class="build-picker">
+    <span class="sr">Construção</span>
+    <select aria-label="Construção" id="build" data-direct-project={active || undefined}>
+      {studioProjects.map(({id,label,href})=><option value={id} data-href={href} selected={active===id}>{label}</option>)}
+    </select>
+  </label>
+  <div class="head-actions"><slot /></div>
+</header>
+<script>
+  const direct=document.querySelector<HTMLSelectElement>('[data-direct-project]');
+  direct?.addEventListener('change',()=>{
+    const target=direct.selectedOptions[0]?.dataset.href;
+    if(target)location.assign(target);
+  });
+</script>
+<style>
+  .studio-brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+  .studio-brand:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+</style>

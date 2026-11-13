@@ -1,0 +1,162 @@
+{
+  "size": [
+    17,
+    14,
+    59
+  ],
+  "count": 772,
+  "counts": {
+    "minecraft:mud_brick_stairs": 78,
+    "minecraft:bamboo_trapdoor": 54,
+    "minecraft:bamboo_slab": 184,
+    "minecraft:bamboo_mosaic_slab": 12,
+    "minecraft:bamboo_block": 91,
+    "minecraft:birch_slab": 43,
+    "minecraft:mud_bricks": 11,
+    "minecraft:stripped_bamboo_block": 5,
+    "minecraft:bamboo_stairs": 72,
+    "minecraft:bamboo_mosaic": 9,
+    "minecraft:bamboo_planks": 28,
+    "minecraft:birch_planks": 20,
+    "minecraft:lantern": 11,
+    "minecraft:iron_chain": 11,
+    "minecraft:torch": 5,
+    "minecraft:mud_brick_wall": 16,
+    "minecraft:bamboo_fence": 63,
+    "minecraft:shroomlight": 5,
+    "minecraft:scaffolding": 12,
+    "minecraft:mud_brick_slab": 37,
+    "minecraft:bamboo_double_slab": 3,
+    "minecraft:birch_double_slab": 1,
+    "minecraft:bell": 1
+  },
+  "states": {
+    "minecraft:mud_brick_stairs": [
+      "{\"minecraft:corner\": \"inner_left\", \"upside_down_bit\": 1, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"inner_left\", \"upside_down_bit\": 1, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"inner_left\", \"upside_down_bit\": 1, \"weirdo_direction\": 3}",
+      "{\"minecraft:corner\": \"inner_right\", \"upside_down_bit\": 1, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 0, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 3}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 1, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 1, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 1, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 1, \"weirdo_direction\": 1}"
+    ],
+    "minecraft:bamboo_trapdoor": [
+      "{\"direction\": 0, \"open_bit\": 0, \"upside_down_bit\": 0}",
+      "{\"direction\": 0, \"open_bit\": 0, \"upside_down_bit\": 1}",
+      "{\"direction\": 0, \"open_bit\": 1, \"upside_down_bit\": 0}",
+      "{\"direction\": 0, \"open_bit\": 1, \"upside_down_bit\": 1}",
+      "{\"direction\": 1, \"open_bit\": 0, \"upside_down_bit\": 0}",
+      "{\"direction\": 1, \"open_bit\": 0, \"upside_down_bit\": 1}",
+      "{\"direction\": 1, \"open_bit\": 1, \"upside_down_bit\": 0}",
+      "{\"direction\": 1, \"open_bit\": 1, \"upside_down_bit\": 1}",
+      "{\"direction\": 2, \"open_bit\": 0, \"upside_down_bit\": 0}",
+      "{\"direction\": 2, \"open_bit\": 1, \"upside_down_bit\": 0}",
+      "{\"direction\": 2, \"open_bit\": 1, \"upside_down_bit\": 1}",
+      "{\"direction\": 3, \"open_bit\": 0, \"upside_down_bit\": 0}",
+      "{\"direction\": 3, \"open_bit\": 0, \"upside_down_bit\": 1}",
+      "{\"direction\": 3, \"open_bit\": 1, \"upside_down_bit\": 0}",
+      "{\"direction\": 3, \"open_bit\": 1, \"upside_down_bit\": 1}"
+    ],
+    "minecraft:bamboo_slab": [
+      "{\"minecraft:vertical_half\": \"bottom\"}",
+      "{\"minecraft:vertical_half\": \"top\"}"
+    ],
+    "minecraft:bamboo_mosaic_slab": [
+      "{\"minecraft:vertical_half\": \"bottom\"}",
+      "{\"minecraft:vertical_half\": \"top\"}"
+    ],
+    "minecraft:bamboo_block": [
+      "{\"pillar_axis\": \"x\"}",
+      "{\"pillar_axis\": \"y\"}",
+      "{\"pillar_axis\": \"z\"}"
+    ],
+    "minecraft:birch_slab": [
+      "{\"minecraft:vertical_half\": \"bottom\"}",
+      "{\"minecraft:vertical_half\": \"top\"}"
+    ],
+    "minecraft:mud_bricks": [
+      "{}"
+    ],
+    "minecraft:stripped_bamboo_block": [
+      "{\"pillar_axis\": \"y\"}"
+    ],
+    "minecraft:bamboo_stairs": [
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 0, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 0, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 0, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 0, \"weirdo_direction\": 3}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"none\", \"upside_down_bit\": 1, \"weirdo_direction\": 3}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 0, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 0, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 0, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"outer_left\", \"upside_down_bit\": 0, \"weirdo_direction\": 3}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 0, \"weirdo_direction\": 0}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 0, \"weirdo_direction\": 1}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 0, \"weirdo_direction\": 2}",
+      "{\"minecraft:corner\": \"outer_right\", \"upside_down_bit\": 0, \"weirdo_direction\": 3}"
+    ],
+    "minecraft:bamboo_mosaic": [
+      "{}"
+    ],
+    "minecraft:bamboo_planks": [
+      "{}"
+    ],
+    "minecraft:birch_planks": [
+      "{}"
+    ],
+    "minecraft:lantern": [
+      "{\"hanging\": 1}"
+    ],
+    "minecraft:iron_chain": [
+      "{\"pillar_axis\": \"y\"}"
+    ],
+    "minecraft:torch": [
+      "{\"torch_facing_direction\": \"east\"}",
+      "{\"torch_facing_direction\": \"north\"}",
+      "{\"torch_facing_direction\": \"south\"}",
+      "{\"torch_facing_direction\": \"top\"}",
+      "{\"torch_facing_direction\": \"west\"}"
+    ],
+    "minecraft:mud_brick_wall": [
+      "{\"wall_connection_type_east\": \"none\", \"wall_connection_type_north\": \"none\", \"wall_connection_type_south\": \"none\", \"wall_connection_type_west\": \"none\", \"wall_post_bit\": 1}",
+      "{\"wall_connection_type_east\": \"none\", \"wall_connection_type_north\": \"none\", \"wall_connection_type_south\": \"none\", \"wall_connection_type_west\": \"short\", \"wall_post_bit\": 1}",
+      "{\"wall_connection_type_east\": \"none\", \"wall_connection_type_north\": \"none\", \"wall_connection_type_south\": \"short\", \"wall_connection_type_west\": \"none\", \"wall_post_bit\": 1}",
+      "{\"wall_connection_type_east\": \"none\", \"wall_connection_type_north\": \"short\", \"wall_connection_type_south\": \"none\", \"wall_connection_type_west\": \"none\", \"wall_post_bit\": 1}",
+      "{\"wall_connection_type_east\": \"short\", \"wall_connection_type_north\": \"none\", \"wall_connection_type_south\": \"none\", \"wall_connection_type_west\": \"none\", \"wall_post_bit\": 1}"
+    ],
+    "minecraft:bamboo_fence": [
+      "{\"minecraft:connection_east\": 0, \"minecraft:connection_north\": 0, \"minecraft:connection_south\": 0, \"minecraft:connection_west\": 0}",
+      "{\"minecraft:connection_east\": 0, \"minecraft:connection_north\": 0, \"minecraft:connection_south\": 0, \"minecraft:connection_west\": 1}",
+      "{\"minecraft:connection_east\": 0, \"minecraft:connection_north\": 0, \"minecraft:connection_south\": 1, \"minecraft:connection_west\": 0}",
+      "{\"minecraft:connection_east\": 0, \"minecraft:connection_north\": 1, \"minecraft:connection_south\": 0, \"minecraft:connection_west\": 0}"
+    ],
+    "minecraft:shroomlight": [
+      "{}"
+    ],
+    "minecraft:scaffolding": [
+      "{\"stability\": 0, \"stability_check\": 1}"
+    ],
+    "minecraft:mud_brick_slab": [
+      "{\"minecraft:vertical_half\": \"top\"}"
+    ],
+    "minecraft:bamboo_double_slab": [
+      "{\"minecraft:vertical_half\": \"bottom\"}"
+    ],
+    "minecraft:birch_double_slab": [
+      "{\"minecraft:vertical_half\": \"bottom\"}"
+    ],
+    "minecraft:bell": [
+      "{\"attachment\": \"hanging\", \"direction\": 3, \"toggle_bit\": 0}"
+    ]
+  },
+  "sha256": "cfe06902c84a68fb263aef2dbec9cfc6ed40536de737d0d9c3a3f5456c3217fd"
+}

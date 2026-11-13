@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {createBlockLight} from '../src/scripts/block-light.js';
+const lantern={name:'minecraft:lantern',x:3,y:4,z:4};
+const wall=[];for(let y=-2;y<16;y++)for(let z=-2;z<61;z++)wall.push({name:'minecraft:mud_bricks',x:5,y,z});
+const parts=b=>b===lantern?[]:[{keys:['solid'],g:{computeBoundingBox(){this.boundingBox={min:{x:0,y:0,z:0},max:{x:1,y:1,z:1}}},dispose(){}}}];
+const light=createBlockLight([lantern,...wall],parts,{solid:{alphaTest:0}});
+light.bake(()=>true);assert.equal(light.sample(7.5,4.5,4.5),0,'solid barrier must stop light');assert.ok(light.sample(3.5,4.5,8.5)>0,'same distance in open space must receive light');
+light.bake(b=>b===lantern);assert.ok(light.sample(7.5,4.5,4.5)>0,'removing wall must release light');
+light.bake(b=>b!==lantern);assert.equal(light.field.some(Boolean),false,'hidden source must stop emitting');
+const remote={name:'minecraft:ochre_froglight',x:48,y:18,z:7};
+const remoteLight=createBlockLight([remote],()=>[],{});
+remoteLight.bake(()=>true);assert.ok(remoteLight.sample(49.5,18.5,7.5)>0,'new source outside the old fixed bounds must emit');
+remoteLight.bake(()=>false);assert.equal(remoteLight.field.some(Boolean),false,'filtered froglight must stop emitting');
+console.log('6 verificações de propagação/oclusão passaram');

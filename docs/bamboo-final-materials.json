@@ -1,0 +1,1169 @@
+{
+  "worldVersion": "1.26.63.1",
+  "officialReference": "v1.26.60.5",
+  "sources": {
+    "metadata": "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/metadata/vanilladata_modules/mojang-blocks.json",
+    "faces": "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/blocks.json",
+    "atlas": "https://github.com/Mojang/bedrock-samples/blob/v1.26.60.5/resource_pack/textures/terrain_texture.json"
+  },
+  "entries": {
+    "minecraft:bamboo": {
+      "label": "Bambu",
+      "shape": "vegetação articulada",
+      "count": 15,
+      "officialStates": {
+        "age_bit": [
+          false,
+          true
+        ],
+        "bamboo_leaf_size": [
+          "no_leaves",
+          "small_leaves",
+          "large_leaves"
+        ],
+        "bamboo_stalk_thickness": [
+          "thin",
+          "thick"
+        ]
+      },
+      "placedStates": [
+        {
+          "age_bit": 1,
+          "bamboo_leaf_size": "large_leaves",
+          "bamboo_stalk_thickness": "thick"
+        },
+        {
+          "age_bit": 1,
+          "bamboo_leaf_size": "no_leaves",
+          "bamboo_stalk_thickness": "thick"
+        },
+        {
+          "age_bit": 1,
+          "bamboo_leaf_size": "small_leaves",
+          "bamboo_stalk_thickness": "thick"
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_leaf",
+        "down": "bamboo_sapling",
+        "north": "bamboo_stem",
+        "south": "bamboo_small_leaf",
+        "east": "bamboo_singleleaf",
+        "west": "bamboo_stem"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_leaf",
+        "down": "textures/blocks/bamboo_sapling",
+        "north": "textures/blocks/bamboo_stem",
+        "south": "textures/blocks/bamboo_small_leaf",
+        "east": "textures/blocks/bamboo_singleleaf",
+        "west": "textures/blocks/bamboo_stem"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_block": {
+      "label": "Bloco de Bambu",
+      "shape": "tora orientável",
+      "count": 89,
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "placedStates": [
+        {
+          "pillar_axis": "x"
+        },
+        {
+          "pillar_axis": "y"
+        },
+        {
+          "pillar_axis": "z"
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_block_top",
+        "down": "bamboo_block_top",
+        "north": "bamboo_block",
+        "south": "bamboo_block",
+        "east": "bamboo_block",
+        "west": "bamboo_block"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_block_top",
+        "down": "textures/blocks/bamboo_block_top",
+        "north": "textures/blocks/bamboo_block",
+        "south": "textures/blocks/bamboo_block",
+        "east": "textures/blocks/bamboo_block",
+        "west": "textures/blocks/bamboo_block"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_double_slab": {
+      "label": "Laje Dupla de Bambu",
+      "shape": "laje dupla",
+      "count": 1,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "bottom"
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_planks",
+        "down": "bamboo_planks",
+        "north": "bamboo_planks",
+        "south": "bamboo_planks",
+        "east": "bamboo_planks",
+        "west": "bamboo_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_planks",
+        "down": "textures/blocks/bamboo_planks",
+        "north": "textures/blocks/bamboo_planks",
+        "south": "textures/blocks/bamboo_planks",
+        "east": "textures/blocks/bamboo_planks",
+        "west": "textures/blocks/bamboo_planks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_fence": {
+      "label": "Cerca de Bambu",
+      "shape": "cerca",
+      "count": 32,
+      "officialStates": {
+        "minecraft:connection_east": [
+          false,
+          true
+        ],
+        "minecraft:connection_north": [
+          false,
+          true
+        ],
+        "minecraft:connection_south": [
+          false,
+          true
+        ],
+        "minecraft:connection_west": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:connection_east": 0,
+          "minecraft:connection_north": 0,
+          "minecraft:connection_south": 0,
+          "minecraft:connection_west": 0
+        },
+        {
+          "minecraft:connection_east": 0,
+          "minecraft:connection_north": 0,
+          "minecraft:connection_south": 0,
+          "minecraft:connection_west": 1
+        },
+        {
+          "minecraft:connection_east": 0,
+          "minecraft:connection_north": 1,
+          "minecraft:connection_south": 0,
+          "minecraft:connection_west": 0
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_fence",
+        "down": "bamboo_fence",
+        "north": "bamboo_fence",
+        "south": "bamboo_fence",
+        "east": "bamboo_fence",
+        "west": "bamboo_fence"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_fence",
+        "down": "textures/blocks/bamboo_fence",
+        "north": "textures/blocks/bamboo_fence",
+        "south": "textures/blocks/bamboo_fence",
+        "east": "textures/blocks/bamboo_fence",
+        "west": "textures/blocks/bamboo_fence"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_fence_gate": {
+      "label": "Portão de bambu",
+      "shape": "portão",
+      "count": 8,
+      "officialStates": {
+        "in_wall_bit": [
+          false,
+          true
+        ],
+        "minecraft:cardinal_direction": [
+          "south",
+          "west",
+          "north",
+          "east"
+        ],
+        "open_bit": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "in_wall_bit": 0,
+          "minecraft:cardinal_direction": "east",
+          "open_bit": 0
+        },
+        {
+          "in_wall_bit": 0,
+          "minecraft:cardinal_direction": "north",
+          "open_bit": 0
+        },
+        {
+          "in_wall_bit": 0,
+          "minecraft:cardinal_direction": "south",
+          "open_bit": 0
+        },
+        {
+          "in_wall_bit": 0,
+          "minecraft:cardinal_direction": "west",
+          "open_bit": 0
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_fence_gate",
+        "down": "bamboo_fence_gate",
+        "north": "bamboo_fence_gate",
+        "south": "bamboo_fence_gate",
+        "east": "bamboo_fence_gate",
+        "west": "bamboo_fence_gate"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_fence_gate",
+        "down": "textures/blocks/bamboo_fence_gate",
+        "north": "textures/blocks/bamboo_fence_gate",
+        "south": "textures/blocks/bamboo_fence_gate",
+        "east": "textures/blocks/bamboo_fence_gate",
+        "west": "textures/blocks/bamboo_fence_gate"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_mosaic": {
+      "label": "Mosaico de Bambu",
+      "shape": "cubo",
+      "count": 7,
+      "officialStates": {},
+      "placedStates": [
+        {}
+      ],
+      "faceKeys": {
+        "up": "bamboo_mosaic",
+        "down": "bamboo_mosaic",
+        "north": "bamboo_mosaic",
+        "south": "bamboo_mosaic",
+        "east": "bamboo_mosaic",
+        "west": "bamboo_mosaic"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_mosaic",
+        "down": "textures/blocks/bamboo_mosaic",
+        "north": "textures/blocks/bamboo_mosaic",
+        "south": "textures/blocks/bamboo_mosaic",
+        "east": "textures/blocks/bamboo_mosaic",
+        "west": "textures/blocks/bamboo_mosaic"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_mosaic_slab": {
+      "label": "Laje de Mosaico de Bambu",
+      "shape": "laje",
+      "count": 15,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "bottom"
+        },
+        {
+          "minecraft:vertical_half": "top"
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_mosaic",
+        "down": "bamboo_mosaic",
+        "north": "bamboo_mosaic",
+        "south": "bamboo_mosaic",
+        "east": "bamboo_mosaic",
+        "west": "bamboo_mosaic"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_mosaic",
+        "down": "textures/blocks/bamboo_mosaic",
+        "north": "textures/blocks/bamboo_mosaic",
+        "south": "textures/blocks/bamboo_mosaic",
+        "east": "textures/blocks/bamboo_mosaic",
+        "west": "textures/blocks/bamboo_mosaic"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_planks": {
+      "label": "Tábuas de Bambu",
+      "shape": "cubo",
+      "count": 22,
+      "officialStates": {},
+      "placedStates": [
+        {}
+      ],
+      "faceKeys": {
+        "up": "bamboo_planks",
+        "down": "bamboo_planks",
+        "north": "bamboo_planks",
+        "south": "bamboo_planks",
+        "east": "bamboo_planks",
+        "west": "bamboo_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_planks",
+        "down": "textures/blocks/bamboo_planks",
+        "north": "textures/blocks/bamboo_planks",
+        "south": "textures/blocks/bamboo_planks",
+        "east": "textures/blocks/bamboo_planks",
+        "west": "textures/blocks/bamboo_planks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_slab": {
+      "label": "Laje de Bambu",
+      "shape": "laje",
+      "count": 55,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "bottom"
+        },
+        {
+          "minecraft:vertical_half": "top"
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_planks",
+        "down": "bamboo_planks",
+        "north": "bamboo_planks",
+        "south": "bamboo_planks",
+        "east": "bamboo_planks",
+        "west": "bamboo_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_planks",
+        "down": "textures/blocks/bamboo_planks",
+        "north": "textures/blocks/bamboo_planks",
+        "south": "textures/blocks/bamboo_planks",
+        "east": "textures/blocks/bamboo_planks",
+        "west": "textures/blocks/bamboo_planks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_stairs": {
+      "label": "Escadas de Bambu",
+      "shape": "escada",
+      "count": 69,
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 0
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 0
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "outer_left",
+          "upside_down_bit": 0,
+          "weirdo_direction": 0
+        },
+        {
+          "minecraft:corner": "outer_left",
+          "upside_down_bit": 0,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "outer_left",
+          "upside_down_bit": 0,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "outer_right",
+          "upside_down_bit": 0,
+          "weirdo_direction": 0
+        },
+        {
+          "minecraft:corner": "outer_right",
+          "upside_down_bit": 0,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "outer_right",
+          "upside_down_bit": 0,
+          "weirdo_direction": 3
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_planks",
+        "down": "bamboo_planks",
+        "north": "bamboo_planks",
+        "south": "bamboo_planks",
+        "east": "bamboo_planks",
+        "west": "bamboo_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_planks",
+        "down": "textures/blocks/bamboo_planks",
+        "north": "textures/blocks/bamboo_planks",
+        "south": "textures/blocks/bamboo_planks",
+        "east": "textures/blocks/bamboo_planks",
+        "west": "textures/blocks/bamboo_planks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:bamboo_trapdoor": {
+      "label": "Alçapão de Bambu",
+      "shape": "alçapão",
+      "count": 166,
+      "officialStates": {
+        "direction": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open_bit": [
+          false,
+          true
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "direction": 0,
+          "open_bit": 0,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 0,
+          "open_bit": 0,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 0,
+          "open_bit": 1,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 0,
+          "open_bit": 1,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 1,
+          "open_bit": 0,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 1,
+          "open_bit": 0,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 1,
+          "open_bit": 1,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 1,
+          "open_bit": 1,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 2,
+          "open_bit": 0,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 2,
+          "open_bit": 0,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 2,
+          "open_bit": 1,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 2,
+          "open_bit": 1,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 3,
+          "open_bit": 0,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 3,
+          "open_bit": 0,
+          "upside_down_bit": 1
+        },
+        {
+          "direction": 3,
+          "open_bit": 1,
+          "upside_down_bit": 0
+        },
+        {
+          "direction": 3,
+          "open_bit": 1,
+          "upside_down_bit": 1
+        }
+      ],
+      "faceKeys": {
+        "up": "bamboo_trapdoor",
+        "down": "bamboo_trapdoor",
+        "north": "bamboo_trapdoor",
+        "south": "bamboo_trapdoor",
+        "east": "bamboo_trapdoor",
+        "west": "bamboo_trapdoor"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/bamboo_trapdoor",
+        "down": "textures/blocks/bamboo_trapdoor",
+        "north": "textures/blocks/bamboo_trapdoor",
+        "south": "textures/blocks/bamboo_trapdoor",
+        "east": "textures/blocks/bamboo_trapdoor",
+        "west": "textures/blocks/bamboo_trapdoor"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:birch_planks": {
+      "label": "Tábuas de Bétula",
+      "shape": "cubo",
+      "count": 23,
+      "officialStates": {},
+      "placedStates": [
+        {}
+      ],
+      "faceKeys": {
+        "up": "birch_planks",
+        "down": "birch_planks",
+        "north": "birch_planks",
+        "south": "birch_planks",
+        "east": "birch_planks",
+        "west": "birch_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/planks_birch",
+        "down": "textures/blocks/planks_birch",
+        "north": "textures/blocks/planks_birch",
+        "south": "textures/blocks/planks_birch",
+        "east": "textures/blocks/planks_birch",
+        "west": "textures/blocks/planks_birch"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:birch_slab": {
+      "label": "Laje de Bétula",
+      "shape": "laje",
+      "count": 19,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "top"
+        }
+      ],
+      "faceKeys": {
+        "up": "birch_planks",
+        "down": "birch_planks",
+        "north": "birch_planks",
+        "south": "birch_planks",
+        "east": "birch_planks",
+        "west": "birch_planks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/planks_birch",
+        "down": "textures/blocks/planks_birch",
+        "north": "textures/blocks/planks_birch",
+        "south": "textures/blocks/planks_birch",
+        "east": "textures/blocks/planks_birch",
+        "west": "textures/blocks/planks_birch"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:iron_chain": {
+      "label": "Corrente de Ferro",
+      "shape": "corrente",
+      "count": 10,
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "placedStates": [
+        {
+          "pillar_axis": "y"
+        }
+      ],
+      "faceKeys": {
+        "up": "chain1",
+        "down": "chain1",
+        "north": "chain2",
+        "south": "chain2",
+        "east": "chain2",
+        "west": "chain2"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/chain1",
+        "down": "textures/blocks/chain1",
+        "north": "textures/blocks/chain2",
+        "south": "textures/blocks/chain2",
+        "east": "textures/blocks/chain2",
+        "west": "textures/blocks/chain2"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:lantern": {
+      "label": "Lampião",
+      "shape": "lanterna",
+      "count": 10,
+      "officialStates": {
+        "hanging": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "hanging": 1
+        }
+      ],
+      "faceKeys": {
+        "up": "lantern",
+        "down": "lantern",
+        "north": "lantern",
+        "south": "lantern",
+        "east": "lantern",
+        "west": "lantern"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/lantern",
+        "down": "textures/blocks/lantern",
+        "north": "textures/blocks/lantern",
+        "south": "textures/blocks/lantern",
+        "east": "textures/blocks/lantern",
+        "west": "textures/blocks/lantern"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:mud_brick_double_slab": {
+      "label": "Laje Dupla de Tijolos de Lama",
+      "shape": "laje dupla",
+      "count": 3,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "bottom"
+        }
+      ],
+      "faceKeys": {
+        "up": "mud_bricks",
+        "down": "mud_bricks",
+        "north": "mud_bricks",
+        "south": "mud_bricks",
+        "east": "mud_bricks",
+        "west": "mud_bricks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/mud_bricks",
+        "down": "textures/blocks/mud_bricks",
+        "north": "textures/blocks/mud_bricks",
+        "south": "textures/blocks/mud_bricks",
+        "east": "textures/blocks/mud_bricks",
+        "west": "textures/blocks/mud_bricks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:mud_brick_slab": {
+      "label": "Laje de Tijolos de Barro",
+      "shape": "laje",
+      "count": 7,
+      "officialStates": {
+        "minecraft:vertical_half": [
+          "bottom",
+          "top"
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:vertical_half": "top"
+        }
+      ],
+      "faceKeys": {
+        "up": "mud_bricks",
+        "down": "mud_bricks",
+        "north": "mud_bricks",
+        "south": "mud_bricks",
+        "east": "mud_bricks",
+        "west": "mud_bricks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/mud_bricks",
+        "down": "textures/blocks/mud_bricks",
+        "north": "textures/blocks/mud_bricks",
+        "south": "textures/blocks/mud_bricks",
+        "east": "textures/blocks/mud_bricks",
+        "west": "textures/blocks/mud_bricks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:mud_brick_stairs": {
+      "label": "Escada de Tijolos de Barro",
+      "shape": "escada",
+      "count": 67,
+      "officialStates": {
+        "minecraft:corner": [
+          "none",
+          "inner_left",
+          "inner_right",
+          "outer_left",
+          "outer_right"
+        ],
+        "upside_down_bit": [
+          false,
+          true
+        ],
+        "weirdo_direction": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "placedStates": [
+        {
+          "minecraft:corner": "inner_left",
+          "upside_down_bit": 1,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "inner_left",
+          "upside_down_bit": 1,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "inner_right",
+          "upside_down_bit": 1,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "inner_right",
+          "upside_down_bit": 1,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 0,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 0
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 1
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "none",
+          "upside_down_bit": 1,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "outer_left",
+          "upside_down_bit": 1,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "outer_left",
+          "upside_down_bit": 1,
+          "weirdo_direction": 3
+        },
+        {
+          "minecraft:corner": "outer_right",
+          "upside_down_bit": 1,
+          "weirdo_direction": 2
+        },
+        {
+          "minecraft:corner": "outer_right",
+          "upside_down_bit": 1,
+          "weirdo_direction": 3
+        }
+      ],
+      "faceKeys": {
+        "up": "mud_bricks",
+        "down": "mud_bricks",
+        "north": "mud_bricks",
+        "south": "mud_bricks",
+        "east": "mud_bricks",
+        "west": "mud_bricks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/mud_bricks",
+        "down": "textures/blocks/mud_bricks",
+        "north": "textures/blocks/mud_bricks",
+        "south": "textures/blocks/mud_bricks",
+        "east": "textures/blocks/mud_bricks",
+        "west": "textures/blocks/mud_bricks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:mud_brick_wall": {
+      "label": "Parede de Tijolos de Barro",
+      "shape": "parede conectável",
+      "count": 8,
+      "officialStates": {
+        "wall_connection_type_east": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_north": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_south": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_connection_type_west": [
+          "none",
+          "short",
+          "tall"
+        ],
+        "wall_post_bit": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "wall_connection_type_east": "none",
+          "wall_connection_type_north": "none",
+          "wall_connection_type_south": "none",
+          "wall_connection_type_west": "none",
+          "wall_post_bit": 1
+        },
+        {
+          "wall_connection_type_east": "none",
+          "wall_connection_type_north": "none",
+          "wall_connection_type_south": "none",
+          "wall_connection_type_west": "short",
+          "wall_post_bit": 1
+        },
+        {
+          "wall_connection_type_east": "none",
+          "wall_connection_type_north": "short",
+          "wall_connection_type_south": "none",
+          "wall_connection_type_west": "none",
+          "wall_post_bit": 1
+        }
+      ],
+      "faceKeys": {
+        "up": "mud_bricks",
+        "down": "mud_bricks",
+        "north": "mud_bricks",
+        "south": "mud_bricks",
+        "east": "mud_bricks",
+        "west": "mud_bricks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/mud_bricks",
+        "down": "textures/blocks/mud_bricks",
+        "north": "textures/blocks/mud_bricks",
+        "south": "textures/blocks/mud_bricks",
+        "east": "textures/blocks/mud_bricks",
+        "west": "textures/blocks/mud_bricks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:mud_bricks": {
+      "label": "Tijolos de Barro",
+      "shape": "cubo",
+      "count": 1,
+      "officialStates": {},
+      "placedStates": [
+        {}
+      ],
+      "faceKeys": {
+        "up": "mud_bricks",
+        "down": "mud_bricks",
+        "north": "mud_bricks",
+        "south": "mud_bricks",
+        "east": "mud_bricks",
+        "west": "mud_bricks"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/mud_bricks",
+        "down": "textures/blocks/mud_bricks",
+        "north": "textures/blocks/mud_bricks",
+        "south": "textures/blocks/mud_bricks",
+        "east": "textures/blocks/mud_bricks",
+        "west": "textures/blocks/mud_bricks"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:ochre_froglight": {
+      "label": "Anfibrilho Ocre",
+      "shape": "cubo",
+      "count": 5,
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "placedStates": [
+        {
+          "pillar_axis": "x"
+        },
+        {
+          "pillar_axis": "y"
+        }
+      ],
+      "faceKeys": {
+        "up": "ochre_froglight_top",
+        "down": "ochre_froglight_top",
+        "north": "ochre_froglight_side",
+        "south": "ochre_froglight_side",
+        "east": "ochre_froglight_side",
+        "west": "ochre_froglight_side"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/ochre_froglight_top",
+        "down": "textures/blocks/ochre_froglight_top",
+        "north": "textures/blocks/ochre_froglight_side",
+        "south": "textures/blocks/ochre_froglight_side",
+        "east": "textures/blocks/ochre_froglight_side",
+        "west": "textures/blocks/ochre_froglight_side"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:scaffolding": {
+      "label": "Andaime",
+      "shape": "andaime",
+      "count": 18,
+      "officialStates": {
+        "stability": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "stability_check": [
+          false,
+          true
+        ]
+      },
+      "placedStates": [
+        {
+          "stability": 0,
+          "stability_check": 1
+        }
+      ],
+      "faceKeys": {
+        "up": "scaffolding_top",
+        "down": "scaffolding_bottom",
+        "north": "scaffolding_side",
+        "south": "scaffolding_side",
+        "east": "scaffolding_side",
+        "west": "scaffolding_side"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/scaffolding_top",
+        "down": "textures/blocks/scaffolding_bottom",
+        "north": "textures/blocks/scaffolding_side",
+        "south": "textures/blocks/scaffolding_side",
+        "east": "textures/blocks/scaffolding_side",
+        "west": "textures/blocks/scaffolding_side"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:stripped_bamboo_block": {
+      "label": "Bloco de Bambu Descascado",
+      "shape": "tora orientável",
+      "count": 7,
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "placedStates": [
+        {
+          "pillar_axis": "x"
+        },
+        {
+          "pillar_axis": "y"
+        }
+      ],
+      "faceKeys": {
+        "up": "stripped_bamboo_block_top",
+        "down": "stripped_bamboo_block_top",
+        "north": "stripped_bamboo_block",
+        "south": "stripped_bamboo_block",
+        "east": "stripped_bamboo_block",
+        "west": "stripped_bamboo_block"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/stripped_bamboo_block_top",
+        "down": "textures/blocks/stripped_bamboo_block_top",
+        "north": "textures/blocks/stripped_bamboo_block",
+        "south": "textures/blocks/stripped_bamboo_block",
+        "east": "textures/blocks/stripped_bamboo_block",
+        "west": "textures/blocks/stripped_bamboo_block"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    },
+    "minecraft:stripped_birch_log": {
+      "label": "Tronco de Bétula Descascado",
+      "shape": "tora orientável",
+      "count": 10,
+      "officialStates": {
+        "pillar_axis": [
+          "y",
+          "x",
+          "z"
+        ]
+      },
+      "placedStates": [
+        {
+          "pillar_axis": "y"
+        }
+      ],
+      "faceKeys": {
+        "up": "stripped_birch_log_top",
+        "down": "stripped_birch_log_top",
+        "north": "stripped_birch_log_side",
+        "south": "stripped_birch_log_side",
+        "east": "stripped_birch_log_side",
+        "west": "stripped_birch_log_side"
+      },
+      "faceTextures": {
+        "up": "textures/blocks/stripped_birch_log_top",
+        "down": "textures/blocks/stripped_birch_log_top",
+        "north": "textures/blocks/stripped_birch_log",
+        "south": "textures/blocks/stripped_birch_log",
+        "east": "textures/blocks/stripped_birch_log",
+        "west": "textures/blocks/stripped_birch_log"
+      },
+      "confidence": "confirmed saved-world ID/states; official sample schema and textures; renderer geometry separately qualified"
+    }
+  }
+}

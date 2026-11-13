@@ -1,0 +1,12 @@
+---
+import {andorinhaUrl,navalArchive} from '../data/studio-projects.js';
+---
+<nav class="ship-nav" aria-label="Projeto Andorinha">
+  <div class="ship-tabs">
+    <a href={andorinhaUrl}>Voltar à Andorinha</a>
+  </div>
+  <details class="ship-archive">
+    <summary>Acervo naval</summary>
+    <ul>{navalArchive.map(([name,href])=><li><a href={href}>{name}</a></li>)}</ul>
+  </details>
+</nav>
