@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {createBlockRenderer} from './block-renderer.js';
 import {createAtmosphere} from './atmosphere.js';
+import {installFlightControls} from './wasd-controls.js';
 const modelUrls={'bamboo-tower':'/model-tower-v1.json','andorinha-v1':'/model-andorinha-v1.json','andorinha-v3':'/model-andorinha-v3.json','andorinha-estudos':'/model-andorinha-estudos.json'};
 const $=s=>document.querySelector(s), model=await (await fetch(modelUrls[$('#build').value]||'/model.json')).json();
 const blocks=model.blocks.sort((a,b)=>a.y-b.y||a.z-b.z||a.x-b.x);blocks.forEach((b,i)=>b.order=i);
@@ -14,7 +15,7 @@ const labels={mud_brick_stairs:'Escada de tijolos de barro',bamboo_trapdoor:'Al�
 const id=b=>b.name.split(':')[1],label=b=>labels[id(b)]||id(b);const coord=new Map(blocks.map(b=>[`${b.x},${b.y},${b.z}`,b]));
 
 let renderer;try{renderer=new THREE.WebGLRenderer({antialias:true});}catch(error){$('#loading').textContent='Não foi possível iniciar o 3D neste navegador. Verifique a aceleração gráfica e tente novamente.';throw error;}renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;renderer.shadowMap.enabled=true;renderer.shadowMap.autoUpdate=false;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0xdfe6df);$('#canvas').append(renderer.domElement);renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label','Modelo 3D. Arraste para girar, use roda para zoom e botão direito para mover.');
-const scene=new THREE.Scene(),perspective=new THREE.PerspectiveCamera(37,1,.1,2000),ortho=new THREE.OrthographicCamera(-30,30,30,-30,.1,2000);let camera=perspective;const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.12;controls.target.copy(modelCenter);controls.screenSpacePanning=true;controls.minDistance=5;controls.maxDistance=500;controls.listenToKeyEvents(renderer.domElement);
+const scene=new THREE.Scene(),perspective=new THREE.PerspectiveCamera(37,1,.1,2000),ortho=new THREE.OrthographicCamera(-30,30,30,-30,.1,2000);let camera=perspective;const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.12;controls.target.copy(modelCenter);controls.screenSpacePanning=true;controls.minDistance=2;controls.maxDistance=500;controls.listenToKeyEvents(renderer.domElement);
 const maxSpan=Math.max(80,model.size[0]+40,model.size[2]+40);
 const sky=new THREE.HemisphereLight(0xffffff,0xbdc6c7,2.1);scene.add(sky);const sun=new THREE.DirectionalLight(0xfff7e9,1.9);sun.position.set(-maxSpan*.4,maxSpan*.7,maxSpan*.3);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-maxSpan*.6,right:maxSpan*.6,top:maxSpan*.6,bottom:-maxSpan*.6,near:1,far:maxSpan*2.4});sun.shadow.bias=-.00005;sun.shadow.normalBias=.018;sun.target.position.set(modelCenter.x,0,modelCenter.z);scene.add(sun,sun.target);const floor=new THREE.Mesh(new THREE.PlaneGeometry(maxSpan*2,maxSpan*2),new THREE.ShadowMaterial({opacity:.16}));floor.rotation.x=-Math.PI/2;floor.position.set(modelCenter.x,-.06,modelCenter.z);floor.receiveShadow=true;scene.add(floor);
 const gridSize=Math.ceil(maxSpan/2)*2;
@@ -47,6 +48,7 @@ function showSelection(b){if(selected!==b)outlineBlock(b);selected=b;const panel
 let down=null;renderer.domElement.addEventListener('pointerdown',e=>down={x:e.clientX,y:e.clientY});renderer.domElement.addEventListener('pointerup',e=>{if(down&&Math.hypot(e.clientX-down.x,e.clientY-down.y)<5)pick(e,true);down=null;});renderer.domElement.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&!e.buttons&&!pinned)pick(e);});
 renderer.domElement.addEventListener('pointerleave',()=>{if(!pinned){clearSelection();invalidate();}});
 let pending=0,dirty=false,frames=0;function invalidate(){dirty=true;if(!pending&&!document.hidden)pending=requestAnimationFrame(frame);}function frame(){pending=0;if(document.hidden)return;const changed=controls.update();if(dirty||changed){renderer.render(scene,camera);frames++;dirty=false;}if(changed)invalidate();}controls.addEventListener('change',invalidate);document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(pending);pending=0;}else invalidate();});
+installFlightControls({controls,getCamera:()=>camera,domElement:renderer.domElement,onMove:invalidate,getSpan:()=>Math.max(...model.size)});
 let currentView='perspective',previousAspect=null;
 function scopedBlocks(){return blocks.filter(b=>part==='all'||moduleOf(b)===part);}
 function scopeBox(){const box=new THREE.Box3();for(const b of scopedBlocks()){box.expandByPoint(new THREE.Vector3(b.x,b.y,b.z));box.expandByPoint(new THREE.Vector3(b.x+1,b.y+1,b.z+1));}return box;}

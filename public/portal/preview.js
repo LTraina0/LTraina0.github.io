@@ -36,9 +36,8 @@ function updateBackdrop(night){
  const floor=backdropMode==='editor'?(night?'#101d35':'#bcd6fa'):backdropMode==='studio'?(night?'#12161d':'#fafbfc'):(night?'#0d1d1f':'#d3cbbd');
  const gradient=backdropContext.createLinearGradient(0,0,0,256);gradient.addColorStop(0,sky);gradient.addColorStop(.45,horizon);gradient.addColorStop(.85,floor);gradient.addColorStop(1,floor);
  backdropContext.fillStyle=gradient;backdropContext.fillRect(0,0,2,256);backdrop.needsUpdate=true;scene.background=backdrop;scene.fog.color.set(horizon);
- if(typeof ground!=='undefined')ground.material.color.set(backdropMode==='studio'?(night?'#13171e':'#f6f7fa'):backdropMode==='editor'?(night?'#122038':'#bfd8fa'):(night?'#69776a':'#d3cbbd'));
+ if(ground)ground.material.color.set(backdropMode==='studio'?(night?'#13171e':'#f6f7fa'):backdropMode==='editor'?(night?'#122038':'#bfd8fa'):(night?'#69776a':'#d3cbbd'));
 }
-updateBackdrop(false);
 const renderer=new T.WebGLRenderer({antialias:true});
 let economy=innerWidth<760,renderFrame=0;
 renderer.setPixelRatio(Math.min(devicePixelRatio,economy?1:1.5));renderer.setSize(innerWidth,innerHeight);

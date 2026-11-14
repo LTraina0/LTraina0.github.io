@@ -2,6 +2,7 @@ import {sternViews} from './stern-views.js';
 import * as T from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {createAtmosphere} from './atmosphere.js';
+import {installFlightControls} from './wasd-controls.js';
 
 const axes={perspective:[1,.65,1.25],avante:[1.35,.78,-.98],front:[0,0,1],back:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,.0001],bottom:[0,-1,.0001]};
 export function createRoofScene(container,assets,onSelect){
@@ -24,6 +25,7 @@ export function createRoofScene(container,assets,onSelect){
   selection.visible=false; scene.add(selection);
   function draw(){ if(!frame) frame=requestAnimationFrame(()=>{frame=0;renderer.render(scene,camera);}); }
   controls.addEventListener('change',draw);
+  installFlightControls({controls,getCamera:()=>camera,domElement:renderer.domElement,onMove:draw,getSpan:()=>span});
   function resize(){
     const w=container.clientWidth,h=container.clientHeight;
     if(!w||!h) return;

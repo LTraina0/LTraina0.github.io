@@ -153,7 +153,7 @@ $('#origin-form').onsubmit=e=>{
   else {$('#origin-status').textContent='Preencha os três valores inteiros.';return;}
   $('#origin-status').textContent=origin?'Origem aplicada.':'Origem removida.';const source=inspectedScene??scene;showSelection(source.selected,source===scene?model:lab?.reference,source);
 };
-$('.hint').textContent='Arraste para girar · roda para aproximar · clique em um bloco para inspecionar';
+$('.hint').textContent='Arraste para girar · roda para zoom · WASD mover · Espaço/Shift subir/descer · clique para inspecionar';
 $('.note').textContent='Quantidades de blocos colocados, em pilhas de 64. Texturas vanilla da Mojang. Iluminação de prévia.';
 document.title=$('#build').value==='andorinha-polar'?'BuildsMine · Andorinha · Creeping Winter':$('#build').value==='andorinha-carpintaria'?'BuildsMine · Popa da Andorinha':$('#build').value==='popa-refinada'?'BuildsMine · Andorinha refinada':$('#build').value==='popa-painel'?'BuildsMine · Popa e painel desprendido':$('#build').value==='estudos-navais'?'BuildsMine · Anatomia naval':$('#build').value==='naufragio-03'?'BuildsMine · O Último Encalhe':$('#build').value==='fachada-022'?'BuildsMine · Fachada refinada 0.2.2':lab?'BuildsMine · Ateliê de arquitetura 0.2':'BuildsMine · Telhado oriental';
 await changeVariant();
