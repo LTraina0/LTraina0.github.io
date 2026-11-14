@@ -8,8 +8,8 @@ export function createRoofScene(container,assets,onSelect){
   const renderer=new T.WebGLRenderer({antialias:true,alpha:false});
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));
   container.append(renderer.domElement);
-  const scene=new T.Scene(), perspective=new T.PerspectiveCamera(38,1,.1,600);
-  const ortho=new T.OrthographicCamera(-1,1,1,-1,.1,600);
+  const scene=new T.Scene(), perspective=new T.PerspectiveCamera(38,1,.1,2000);
+  const ortho=new T.OrthographicCamera(-1,1,1,-1,.1,2000);
   let camera=perspective, span=22, frame=0, model=null, batches=[], selected=null,night=false,navalLights=[];
   let opaqueNeighbors=new Map();
   const controls=new OrbitControls(camera,renderer.domElement);
@@ -65,6 +65,12 @@ export function createRoofScene(container,assets,onSelect){
     for(const {mesh} of batches){scene.remove(mesh);mesh.dispose();}
     assets=nextAssets;
     model=next;select(null);
+    if(next.blocks?.length){
+      const box=new T.Box3();
+      for(const b of next.blocks){box.expandByPoint(new T.Vector3(b.x,b.y,b.z));box.expandByPoint(new T.Vector3(b.x+1,b.y+1,b.z+1));}
+      const c=box.getCenter(new T.Vector3()), sz=box.getSize(new T.Vector3());
+      atmosphere.setBounds(c,Math.max(sz.x,sz.z),sz.y);
+    }
     if(model.naval||model.polar)for(const block of model.blocks.filter(b=>b.id==='minecraft:lantern').slice(0,8)){
       const light=new T.PointLight(0xffb65a,night?4:.35,8,2);light.position.set(block.x+.5,block.y+.4,block.z+.5);scene.add(light);navalLights.push({light,block});
     }
@@ -120,13 +126,24 @@ export function createRoofScene(container,assets,onSelect){
     const hit=ray.intersectObjects(batches.filter(b=>b.mesh.visible).map(b=>b.mesh),false).find(assets.alphaHit);
     select(hit?.object.userData.active[hit.instanceId]??null);
   });
+  function setBackdrop(value){
+    atmosphere.setBackdrop(value);
+    const b=atmosphere.backdrop;
+    if(!night&&!model?.polar){
+      sky.groundColor.set(b==='studio'?0xf2f0eb:b==='editor'?0xc6daf4:0xc7b4a0);
+      grid.material.color.set(b==='studio'?0x9ca4ae:0x637b71);
+    }
+    draw();
+  }
+  setBackdrop(document.querySelector('#backdrop')?.value||'editor');
   function lighting(value){
     night=value;
     const polar=Boolean(model?.polar);
     for(const{light}of navalLights)light.intensity=night?4:polar?.8:.35;
     atmosphere.setEnvironment(night);
     sky.color.set(polar?0xd7edff:0xffffff);
-    sky.groundColor.set(polar?0x536a7e:0xc7b4a0);
+    const b=atmosphere.backdrop;
+    sky.groundColor.set(polar?0x536a7e:b==='studio'&&!night?0xf2f0eb:b==='editor'&&!night?0xc6daf4:0xc7b4a0);
     sky.intensity=night?1.05:1.85;
     sun.intensity=night?.6:polar?1.7:2;
     sun.color.set(night?0xd1dffb:polar?0xd3e9ff:0xfff3da);
@@ -139,5 +156,5 @@ export function createRoofScene(container,assets,onSelect){
     camera.zoom=other.camera.zoom;controls.object=camera;controls.target.copy(other.controls.target);
     controls.update();resize();
   }
-  return {renderer,scene,controls,load,filter,fit,select,lighting,grid,draw,matchView,get span(){return span;},get camera(){return camera;},get batches(){return batches;},get selected(){return selected;}};
+  return {renderer,scene,controls,load,filter,fit,select,lighting,setBackdrop,grid,draw,matchView,get span(){return span;},get camera(){return camera;},get batches(){return batches;},get selected(){return selected;}};
 }

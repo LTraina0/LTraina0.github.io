@@ -137,6 +137,9 @@ $('#theme').onclick=()=>{
   const night=document.body.classList.toggle('dark');scene.lighting(night);lab?.lighting(night);
   $('#theme').setAttribute('aria-pressed',String(night));$('#theme span').textContent=night?'Noite':'Dia';
 };
+const initialBackdrop=search.get('fundo')||search.get('backdrop');
+if(initialBackdrop&&['editor','studio','classic'].includes(initialBackdrop)&&$('#backdrop'))$('#backdrop').value=initialBackdrop;
+if($('#backdrop'))$('#backdrop').onchange=e=>{scene?.setBackdrop(e.target.value);lab?.backdrop?.(e.target.value);};
 function materials(open){
   $('#material-dialog').hidden=!open;$('#materials').setAttribute('aria-expanded',String(open));
   if(open){inventory();$('#close-materials').focus();}else $('#materials').focus();

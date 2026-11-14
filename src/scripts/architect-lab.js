@@ -238,6 +238,7 @@ export async function createLab(){
     },
     refFilter,framing,compareInitial(){if([...selector.options].some(o=>o.value===query.get('compare'))){selector.value=query.get('compare');return compare();}},
     lighting(night){if(refReady)referenceScene.lighting(night);},
+    backdrop(value){if(refReady)referenceScene.setBackdrop(value);},
     grid(value){if(refReady){referenceScene.grid.visible=value;referenceScene.draw();}},
     get reference(){return refReady?referenceModel:null;},get referenceScene(){return refReady?referenceScene:null;},
     get referenceVisible(){return refReady?referenceSet:null;}
