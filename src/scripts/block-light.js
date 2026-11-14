@@ -8,7 +8,7 @@ export function createBlockLight(blocks,parts,materials){
  const cell=(x,y,z)=>Math.floor((x-min[0])*scale)+Math.floor((y-min[1])*scale)*strideY+Math.floor((z-min[2])*scale)*strideZ;
  const solids=new Map();
  for(const b of blocks){const set=new Set();for(const {g,keys} of parts(b)){if(keys.every(k=>!materials[k].alphaTest)){g.computeBoundingBox();const a=g.boundingBox.min,c=g.boundingBox.max;for(let x=0;x<2;x++)for(let y=0;y<2;y++)for(let z=0;z<2;z++){const px=(x+.5)/2,py=(y+.5)/2,pz=(z+.5)/2;if(px>a.x+1e-5&&px<c.x-1e-5&&py>a.y+1e-5&&py<c.y-1e-5&&pz>a.z+1e-5&&pz<c.z-1e-5)set.add(cell(b.x+px,b.y+py,b.z+pz));}}g.dispose();}solids.set(b,[...set]);}
- const sources=blocks.filter(b=>['minecraft:lantern','minecraft:torch','minecraft:shroomlight','minecraft:ochre_froglight','minecraft:glowstone'].includes(b.name));let field=new Uint8Array(n),occupied=new Uint8Array(n),bakes=0;
+ const sources=blocks.filter(b=>['minecraft:lantern','minecraft:torch','minecraft:shroomlight','minecraft:ochre_froglight','minecraft:pearlescent_froglight','minecraft:glowstone'].includes(b.name));let field=new Uint8Array(n),occupied=new Uint8Array(n),bakes=0;
  function bake(accept){occupied.fill(0);field.fill(0);for(const [b,cells] of solids)if(accept(b))for(const i of cells)occupied[i]=1;
   const buckets=Array.from({length:31},()=>[]);
   for(const b of sources)if(accept(b)){const level=b.name==='minecraft:torch'?28:30;for(let x=0;x<2;x++)for(let y=0;y<2;y++)for(let z=0;z<2;z++){const i=cell(b.x+(x+.5)/2,b.y+(y+.5)/2,b.z+(z+.5)/2);if(field[i]<level){field[i]=level;buckets[level].push(i);}}}
