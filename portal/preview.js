@@ -29,10 +29,14 @@ scene.fog=new T.Fog('#e9e4db',140,260);
 // orbiting an orthographic camera; no blue rectangle under the ground plane.
 const backdropCanvas=document.createElement('canvas');backdropCanvas.width=2;backdropCanvas.height=256;
 const backdropContext=backdropCanvas.getContext('2d'),backdrop=new T.CanvasTexture(backdropCanvas);backdrop.colorSpace=T.SRGBColorSpace;
+let backdropMode='editor';
 function updateBackdrop(night){
- const sky=night?'#33476a':'#e9e4db',floor=night?'#0d1d1f':'#d3cbbd';
- const gradient=backdropContext.createLinearGradient(0,0,0,256);gradient.addColorStop(0,sky);gradient.addColorStop(.45,sky);gradient.addColorStop(.85,floor);gradient.addColorStop(1,floor);
- backdropContext.fillStyle=gradient;backdropContext.fillRect(0,0,2,256);backdrop.needsUpdate=true;scene.background=backdrop;scene.fog.color.set(sky);
+ const sky=backdropMode==='editor'?(night?'#0d1930':'#7eb0ff'):backdropMode==='studio'?(night?'#1c212b':'#ffffff'):(night?'#33476a':'#e9e4db');
+ const horizon=backdropMode==='editor'?(night?'#142342':'#cbe2ff'):backdropMode==='studio'?(night?'#13171e':'#f4f6f9'):(night?'#33476a':'#e9e4db');
+ const floor=backdropMode==='editor'?(night?'#101d35':'#bcd6fa'):backdropMode==='studio'?(night?'#12161d':'#fafbfc'):(night?'#0d1d1f':'#d3cbbd');
+ const gradient=backdropContext.createLinearGradient(0,0,0,256);gradient.addColorStop(0,sky);gradient.addColorStop(.45,horizon);gradient.addColorStop(.85,floor);gradient.addColorStop(1,floor);
+ backdropContext.fillStyle=gradient;backdropContext.fillRect(0,0,2,256);backdrop.needsUpdate=true;scene.background=backdrop;scene.fog.color.set(horizon);
+ if(typeof ground!=='undefined')ground.material.color.set(backdropMode==='studio'?(night?'#13171e':'#f6f7fa'):backdropMode==='editor'?(night?'#122038':'#bfd8fa'):(night?'#69776a':'#d3cbbd'));
 }
 updateBackdrop(false);
 const renderer=new T.WebGLRenderer({antialias:true});
@@ -47,7 +51,7 @@ const controls=new OrbitControls(camera,renderer.domElement);controls.target.set
 const ambient=new T.HemisphereLight('#fff6dd','#8b8f92',2);scene.add(ambient);
 const sun=new T.DirectionalLight('#fff5de',3.1);sun.position.set(-12,65,-24);sun.target.position.set(31,0,8);
 sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-55,right:55,top:48,bottom:-48,near:1,far:150});sun.shadow.normalBias=.03;sun.shadow.bias=-.00005;scene.add(sun,sun.target);
-const ground=new T.Mesh(new T.PlaneGeometry(2000,2000),new T.MeshStandardMaterial({color:'#d3cbbd',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.set(31,-.02,8);ground.receiveShadow=true;scene.add(ground);
+const ground=new T.Mesh(new T.PlaneGeometry(2000,2000),new T.MeshStandardMaterial({color:'#bfd8fa',roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.set(31,-.02,8);ground.receiveShadow=true;scene.add(ground);updateBackdrop(false);
 const loader=new T.TextureLoader(),textures={};
 const textureNames=[...new Set(Object.values(model.catalog).flatMap(spec=>Object.values(spec.faces)).map(file=>file.split('/').pop()))];
 await Promise.all(textureNames.map(async name=>{
@@ -266,7 +270,7 @@ function setLighting(mode){
  document.body.classList.toggle('night',night);updateBackdrop(night);
  ambient.color.set(night?'#8eafd2':'#fff6dd');ambient.groundColor.set(night?'#394b5f':'#8b8f92');ambient.intensity=night?.85:2;
  sun.color.set(night?'#a5c3eb':'#fff5de');sun.intensity=night?.8:3.1;
- ground.material.color.set(night?'#69776a':'#d3cbbd');localLights.visible=night;
+ localLights.visible=night;
  renderer.toneMappingExposure=night?1.12:1.22;
  document.querySelector('#day-mode').setAttribute('aria-pressed',String(!night));
  document.querySelector('#night-mode').setAttribute('aria-pressed',String(night));
@@ -482,4 +486,5 @@ window.portal.applyBuildFilters=({mode,step,part})=>{
 const gridSize=Math.ceil(Math.max(...model.size)/10)*10+20;
 const buildGrid=new T.GridHelper(gridSize,gridSize,0x78888b,0x78888b);buildGrid.position.set(Math.floor(model.size[0]/2),.005,Math.floor(model.size[2]/2));buildGrid.material.transparent=true;buildGrid.material.opacity=.25;buildGrid.visible=false;scene.add(buildGrid);window.portal.buildGrid=buildGrid;
 window.portal.setGrid=value=>{buildGrid.visible=value;render();};
+window.portal.setBackdrop=value=>{backdropMode=['editor','studio','classic'].includes(value)?value:'editor';updateBackdrop(lighting==='night');render();};
 window.portal.embeddedReady=true;
