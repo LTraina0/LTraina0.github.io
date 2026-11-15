@@ -7,7 +7,7 @@ import {installTouchpadControls} from './touchpad-controls.js';
 const modelUrls={'bamboo-tower':'/model-tower-v1.json','andorinha-v1':'/model-andorinha-v1.json','andorinha-v1-teste-a':'/model-andorinha-v1-teste-a.json','andorinha-v1-teste-b':'/model-andorinha-v1-teste-b.json','andorinha-v3':'/model-andorinha-v3.json','andorinha-estudos':'/model-andorinha-estudos.json'};
 const $=s=>document.querySelector(s),urlParams=new URLSearchParams(location.search),buildId=$('#build').value;
 const resolvedModelUrl=modelUrls[buildId]||'/model.json';
-const model=await (await fetch(resolvedModelUrl)).json();
+const model=await (await fetch(resolvedModelUrl,{cache:'no-cache'})).json();
 const blocks=model.blocks.sort((a,b)=>a.y-b.y||a.z-b.z||a.x-b.x);blocks.forEach((b,i)=>b.order=i);
 const height=model.size[1],modelCenter=new THREE.Vector3(...model.size.map(v=>v/2));
 const modules=model.modules??[],front=new THREE.Vector3(...(model.orientation?.front??[0,0,1])).normalize();
