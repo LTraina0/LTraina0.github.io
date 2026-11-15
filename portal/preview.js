@@ -31,12 +31,12 @@ const backdropCanvas=document.createElement('canvas');backdropCanvas.width=2;bac
 const backdropContext=backdropCanvas.getContext('2d'),backdrop=new T.CanvasTexture(backdropCanvas);backdrop.colorSpace=T.SRGBColorSpace;
 let backdropMode='editor';
 function updateBackdrop(night){
- const sky=backdropMode==='editor'?(night?'#0d1930':'#7eb0ff'):backdropMode==='studio'?(night?'#1c212b':'#ffffff'):(night?'#33476a':'#e9e4db');
- const horizon=backdropMode==='editor'?(night?'#142342':'#cbe2ff'):backdropMode==='studio'?(night?'#13171e':'#f4f6f9'):(night?'#33476a':'#e9e4db');
- const floor=backdropMode==='editor'?(night?'#101d35':'#bcd6fa'):backdropMode==='studio'?(night?'#12161d':'#fafbfc'):(night?'#0d1d1f':'#d3cbbd');
+ const sky=backdropMode==='editor'?(night?'#081022':'#77a6ff'):(night?'#33476a':'#e9e4db');
+ const horizon=backdropMode==='editor'?(night?'#132242':'#cde2ff'):(night?'#33476a':'#e9e4db');
+ const floor=backdropMode==='editor'?(night?'#0d182e':'#b9d5fb'):(night?'#0d1d1f':'#d3cbbd');
  const gradient=backdropContext.createLinearGradient(0,0,0,256);gradient.addColorStop(0,sky);gradient.addColorStop(.45,horizon);gradient.addColorStop(.85,floor);gradient.addColorStop(1,floor);
  backdropContext.fillStyle=gradient;backdropContext.fillRect(0,0,2,256);backdrop.needsUpdate=true;scene.background=backdrop;scene.fog.color.set(horizon);
- if(ground)ground.material.color.set(backdropMode==='studio'?(night?'#13171e':'#f6f7fa'):backdropMode==='editor'?(night?'#122038':'#bfd8fa'):(night?'#69776a':'#d3cbbd'));
+ if(ground)ground.material.color.set(backdropMode==='editor'?(night?'#122038':'#bfd8fa'):(night?'#69776a':'#d3cbbd'));
 }
 const renderer=new T.WebGLRenderer({antialias:true});
 let economy=innerWidth<760,renderFrame=0;
