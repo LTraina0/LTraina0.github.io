@@ -88,14 +88,13 @@ export function installFlightControls({
       keys.has('ControlLeft') ||
       keys.has('ControlRight');
 
-    const baseSpeed = Math.max(11, Math.min(34, Number(getSpan() || 30) * 0.34));
-    const speed = baseSpeed * (sprinting ? 2.2 : 1) * dt;
-    const zoomFactor = 1 + (sprinting ? 2.4 : 1.35) * dt;
+    const baseSpeed = Math.max(10, Math.min(18, Number(getSpan() || 30) * 0.16));
+    const speed = baseSpeed * (sprinting ? 1.75 : 1) * dt;
+    const zoomFactor = 1 + (sprinting ? 2.1 : 1.3) * dt;
 
     delta.set(0, 0, 0);
     camera.getWorldDirection(lookDir);
-    right.set(1, 0, 0).applyQuaternion(camera.quaternion);
-    if (camera.isOrthographicCamera) right.y = 0;
+    right.set(1, 0, 0).applyQuaternion(camera.quaternion).setY(0);
     if (right.lengthSq() > 1e-6) right.normalize();
 
     if (camera.isOrthographicCamera) {
@@ -137,7 +136,14 @@ export function installFlightControls({
         if (keys.has('ShiftLeft') || keys.has('ShiftRight')) delta.y -= speed;
       }
     } else {
-      forward.copy(lookDir).normalize();
+      // Minecraft Editor style flight: WASD moves horizontally on XZ, Space/Shift handle vertical Y.
+      if (Math.abs(lookDir.y) > 0.92) {
+        forward.set(0, 1, 0).applyQuaternion(camera.quaternion).setY(0);
+      } else {
+        forward.copy(lookDir).setY(0);
+      }
+      if (forward.lengthSq() > 1e-6) forward.normalize();
+
       if (keys.has('KeyW')) delta.addScaledVector(forward, speed);
       if (keys.has('KeyS')) delta.addScaledVector(forward, -speed);
       if (keys.has('KeyD')) delta.addScaledVector(right, speed);
@@ -148,7 +154,6 @@ export function installFlightControls({
 
     camera.position.add(delta);
     controls.target.add(delta);
-    controls.update();
     onMove?.();
 
     rafId = requestAnimationFrame(step);
@@ -199,7 +204,6 @@ export function installFlightControls({
 
   function onPointerDown() {
     activate();
-    domElement.focus({ preventScroll: true });
   }
 
   domElement.addEventListener('pointerdown', onPointerDown);

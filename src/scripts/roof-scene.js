@@ -132,8 +132,8 @@ export function createRoofScene(container,assets,onSelect){
     atmosphere.setBackdrop(value);
     const b=atmosphere.backdrop;
     if(!night&&!model?.polar){
-      sky.groundColor.set(b==='studio'?0xf2f0eb:b==='editor'?0xc6daf4:0xc7b4a0);
-      grid.material.color.set(b==='studio'?0x9ca4ae:0x637b71);
+      sky.groundColor.set(b==='editor'?0xc4dcfb:0xc7b4a0);
+      grid.material.color.set(0x637b71);
     }
     draw();
   }
@@ -145,7 +145,7 @@ export function createRoofScene(container,assets,onSelect){
     atmosphere.setEnvironment(night);
     sky.color.set(polar?0xd7edff:0xffffff);
     const b=atmosphere.backdrop;
-    sky.groundColor.set(polar?0x536a7e:b==='studio'&&!night?0xf2f0eb:b==='editor'&&!night?0xc6daf4:0xc7b4a0);
+    sky.groundColor.set(polar?0x536a7e:b==='editor'&&!night?0xc4dcfb:0xc7b4a0);
     sky.intensity=night?1.05:1.85;
     sun.intensity=night?.6:polar?1.7:2;
     sun.color.set(night?0xd1dffb:polar?0xd3e9ff:0xfff3da);

@@ -33,7 +33,7 @@ $('#part').onchange=resetRange;$('#mode').onchange=e=>{mode=e.target.value;reset
 $('#view').onchange=e=>p.view(e.target.value==='perspective'?'iso':e.target.value);$('#fit').onclick=()=>{$('#view').value='perspective';p.view('iso')};$('#grid').onclick=e=>{const visible=!p.buildGrid.visible;p.setGrid(visible);e.currentTarget.setAttribute('aria-pressed',String(visible))};
 $('#theme').onclick=()=>{const night=document.body.classList.toggle('dark');p.setLighting(night?'night':'day');$('#theme').setAttribute('aria-pressed',String(night));$('#theme span').textContent=night?'Noite':'Dia';};
 const backdropSelect=$('#backdrop'),urlBackdrop=new URLSearchParams(location.search).get('fundo')||new URLSearchParams(location.search).get('backdrop');
-if(urlBackdrop&&['editor','studio','classic'].includes(urlBackdrop)&&backdropSelect)backdropSelect.value=urlBackdrop;
+if(urlBackdrop&&['editor','classic'].includes(urlBackdrop)&&backdropSelect)backdropSelect.value=urlBackdrop;
 function syncPortalBackdrop(){const v=backdropSelect?.value||'editor';p.setBackdrop?.(v);document.body.classList.remove('backdrop-editor','backdrop-studio','backdrop-classic');document.body.classList.add('backdrop-'+v);}
 if(backdropSelect){backdropSelect.onchange=syncPortalBackdrop;syncPortalBackdrop();}
 $('#materials').onclick=()=>{const show=$('#material-dialog').hidden;$('#material-dialog').hidden=!show;$('#materials').setAttribute('aria-expanded',String(show));sync()};$('#close-materials').onclick=()=>{$('#material-dialog').hidden=true;$('#materials').setAttribute('aria-expanded','false');$('#materials').focus()};
