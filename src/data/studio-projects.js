@@ -2,6 +2,7 @@ export const studioProjects=[
   {id:'bamboo',label:'Casa de Bambu'},
   {id:'bamboo-tower',label:'Casa de Bambu · estudo da torre'},
   {id:'andorinha-v1',label:'Andorinha · V1'},
+  {id:'andorinha-ab',label:'Andorinha · V1 (Testes A e B)',href:'/andorinha-ab/'},
   {id:'andorinha-v3',label:'Andorinha · V3'},
   {id:'andorinha-estudos',label:'Andorinha · Estudos de galeria e cabine'},
   {id:'portal-1.0.3',label:'Portal Escarlate · 1.0.3 · Fachada original'},
