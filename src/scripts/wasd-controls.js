@@ -30,6 +30,8 @@ export function installFlightControls({
   let lastTime = 0;
   let lastWTapAt = 0;
   let doubleTapSprint = false;
+  let pointerDownCount = 0;
+  let lastShiftWheelAt = 0;
 
   const activate = () => {
     activeDom = domElement;
@@ -148,8 +150,12 @@ export function installFlightControls({
       if (keys.has('KeyS')) delta.addScaledVector(forward, -speed);
       if (keys.has('KeyD')) delta.addScaledVector(right, speed);
       if (keys.has('KeyA')) delta.addScaledVector(right, -speed);
+      const shiftHeld =
+        (keys.has('ShiftLeft') || keys.has('ShiftRight')) &&
+        pointerDownCount === 0 &&
+        now - lastShiftWheelAt > 300;
       if (keys.has('Space')) delta.y += speed;
-      if (keys.has('ShiftLeft') || keys.has('ShiftRight')) delta.y -= speed;
+      if (shiftHeld) delta.y -= speed;
     }
 
     camera.position.add(delta);
@@ -204,9 +210,19 @@ export function installFlightControls({
 
   function onPointerDown() {
     activate();
+    pointerDownCount++;
+  }
+  function onPointerEnd() {
+    pointerDownCount = Math.max(0, pointerDownCount - 1);
+  }
+  function onWheelActivity(e) {
+    if (e.shiftKey) lastShiftWheelAt = performance.now();
   }
 
   domElement.addEventListener('pointerdown', onPointerDown);
+  domElement.addEventListener('pointerup', onPointerEnd);
+  domElement.addEventListener('pointercancel', onPointerEnd);
+  domElement.addEventListener('wheel', onWheelActivity, { passive: true, capture: true });
   domElement.addEventListener('pointerenter', activate);
   domElement.addEventListener('focus', activate);
 

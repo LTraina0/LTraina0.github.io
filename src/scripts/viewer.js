@@ -3,6 +3,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {createBlockRenderer} from './block-renderer.js';
 import {createAtmosphere} from './atmosphere.js';
 import {installFlightControls} from './wasd-controls.js';
+import {installTouchpadControls} from './touchpad-controls.js';
 const modelUrls={'bamboo-tower':'/model-tower-v1.json','andorinha-v1':'/model-andorinha-v1.json','andorinha-v3':'/model-andorinha-v3.json','andorinha-estudos':'/model-andorinha-estudos.json'};
 const $=s=>document.querySelector(s), model=await (await fetch(modelUrls[$('#build').value]||'/model.json')).json();
 const blocks=model.blocks.sort((a,b)=>a.y-b.y||a.z-b.z||a.x-b.x);blocks.forEach((b,i)=>b.order=i);
@@ -49,6 +50,7 @@ let down=null,hoverTimer=0;renderer.domElement.addEventListener('pointerdown',e=
 renderer.domElement.addEventListener('pointerleave',()=>{if(!pinned){clearSelection();invalidate();}});
 let pending=0,dirty=false,frames=0;function invalidate(){dirty=true;if(!pending&&!document.hidden)pending=requestAnimationFrame(frame);}function frame(){pending=0;if(document.hidden)return;const changed=controls.update();if(dirty||changed){renderer.render(scene,camera);frames++;dirty=false;}if(changed)invalidate();}controls.addEventListener('change',invalidate);document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(pending);pending=0;}else invalidate();});
 const flight=installFlightControls({controls,getCamera:()=>camera,domElement:renderer.domElement,onMove:invalidate,getSpan:()=>Math.max(...model.size)});
+installTouchpadControls({controls,getCamera:()=>camera,domElement:renderer.domElement,onMove:invalidate,toggleButton:$('#drag-mode')});
 let currentView='perspective',previousAspect=null;
 function scopedBlocks(){return blocks.filter(b=>part==='all'||moduleOf(b)===part);}
 function scopeBox(){const box=new THREE.Box3();for(const b of scopedBlocks()){box.expandByPoint(new THREE.Vector3(b.x,b.y,b.z));box.expandByPoint(new THREE.Vector3(b.x+1,b.y+1,b.z+1));}return box;}

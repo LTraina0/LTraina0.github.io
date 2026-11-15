@@ -1,4 +1,5 @@
 import {installFlightControls} from './wasd-controls.js';
+import {installTouchpadControls} from './touchpad-controls.js';
 const $=s=>document.querySelector(s),version=$('#build').value.slice(7);
 const frame=document.createElement('iframe');frame.title=`Portal Escarlate ${version} — visualização interativa`;frame.src='/portal/viewer.html?version='+encodeURIComponent(version);frame.className='portal-frame';$('#canvas').append(frame);
 const p=await new Promise((resolve,reject)=>{const start=performance.now();function check(){if(frame.contentWindow?.portal?.embeddedReady)return resolve(frame.contentWindow.portal);if(performance.now()-start>120000)return reject(Error('Portal initialization timeout'));setTimeout(check,100)}check()});
@@ -40,6 +41,7 @@ $('#materials').onclick=()=>{const show=$('#material-dialog').hidden;$('#materia
 function escape(e){if(e.key!=='Escape')return;if(!$('#material-dialog').hidden)$('#close-materials').click();else p.selectBlock(null)}document.addEventListener('keydown',escape);doc.addEventListener('keydown',escape);
 $('#origin-form').onsubmit=e=>{e.preventDefault();const values=['x','y','z'].map(axis=>$('#origin-'+axis).value.trim());if(values.every(v=>v==='')){origin=null;$('#origin-status').textContent='Origem removida.'}else if(values.some(v=>!v||!Number.isSafeInteger(Number(v)))){$('#origin-status').textContent='Preencha os três valores inteiros.';return}else{origin=values.map(Number);$('#origin-status').textContent='Origem aplicada nesta sessão.'}sync()};
 installFlightControls({controls:p.controls,getCamera:()=>p.camera,domElement:p.renderer.domElement,onMove:p.render,getSpan:()=>Math.max(...model.size),listenWindows:[window,frame.contentWindow]});
+installTouchpadControls({controls:p.controls,getCamera:()=>p.camera,domElement:p.renderer.domElement,onMove:p.render,toggleButton:$('#drag-mode')});
 $('.hint').textContent='Arraste para girar · roda para zoom · WASD mover · Espaço/Shift subir/descer · botões acionam portões';
 window.buildsMine={project:'portal-'+version,portal:p,frame,ready:true};window.studio={renderer:p.renderer,scene:p.scene,camera:p.camera,blocks:model.blocks,get selected(){return p.inspection.block}};
 resetRange();if(new URLSearchParams(location.search).get('theme')==='night')$('#theme').click();$('#loading').hidden=true;sync();
