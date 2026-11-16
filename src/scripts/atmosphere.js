@@ -124,24 +124,27 @@ export function createAtmosphere(scene,blocks=[]){
 
  let backdropMode='editor',isNight=false,boundsCenter=new T.Vector3(24,10,12),boundsSpan=80,boundsHeight=32;
 
+ const _cloudMat=new T.Matrix4(),_cloudQuat=new T.Quaternion(),_cloudScale=new T.Vector3(),_cloudPos=new T.Vector3();
  function updateCloudsAndFloor(){
   const baseRadius=Math.max(76,boundsSpan*1.05);
   const cloudY=Math.max(boundsHeight+56,boundsSpan*.9);
-  const m=new T.Matrix4(),q=new T.Quaternion(),s=new T.Vector3(),pos=new T.Vector3();
   cloudSpecs.forEach((c,i)=>{
    const r=baseRadius*c.ring;
-   pos.set(
+   _cloudPos.set(
     boundsCenter.x+Math.cos(c.angle)*r+c.ox,
     cloudY+c.dy,
     boundsCenter.z+Math.sin(c.angle)*r+c.oz
    );
-   s.set(c.w,c.h,c.d);
-   m.compose(pos,q,s);
-   clouds.setMatrixAt(i,m);
+   _cloudScale.set(c.w,c.h,c.d);
+   _cloudMat.compose(_cloudPos,_cloudQuat,_cloudScale);
+   clouds.setMatrixAt(i,_cloudMat);
   });
   clouds.instanceMatrix.needsUpdate=true;
   clouds.computeBoundingSphere();
  }
+
+ const editorFog=new T.Fog('#cde2ff',170,410);
+ const bgColor=new T.Color('#cde2ff');
 
  function apply(){
   const horizon=backdropMode==='editor'?(isNight?'#132242':'#cde2ff'):(isNight?'#304858':'#e5e9df');
@@ -151,7 +154,10 @@ export function createAtmosphere(scene,blocks=[]){
    skyUniforms.uBottomColor.value.set(isNight?'#0d182e':'#b9d5fb');
    skyUniforms.uStars.value=isNight?1:0;
    clouds.visible=true;cloudMaterial.color.set(isNight?0x324b73:0xffffff);cloudMaterial.opacity=isNight?.68:.94;
-   scene.fog=new T.Fog(horizon,Math.max(170,boundsSpan*2.3),Math.max(410,boundsSpan*5.6));
+   editorFog.color.set(horizon);
+   editorFog.near=Math.max(170,boundsSpan*2.3);
+   editorFog.far=Math.max(410,boundsSpan*5.6);
+   scene.fog=editorFog;
    fill.color.set(isNight?0x8db7ff:0x9ec6ff);fill.intensity=isNight?.65:.28;
   }else{
    skyUniforms.uTopColor.value.set(isNight?'#182b43':'#bdd9e8');
@@ -161,7 +167,8 @@ export function createAtmosphere(scene,blocks=[]){
    clouds.visible=false;scene.fog=null;
    fill.color.set(isNight?0x8db7ff:0xe0ebed);fill.intensity=isNight?.65:.18;
   }
-  scene.background=new T.Color(horizon);
+  bgColor.set(horizon);
+  scene.background=bgColor;
   glowMaterial.uniforms.strength.value=isNight?.30:.035;
   document.body.classList.remove('backdrop-editor','backdrop-studio','backdrop-classic');
   document.body.classList.add('backdrop-'+backdropMode);
@@ -183,6 +190,13 @@ export function createAtmosphere(scene,blocks=[]){
  function setEnvironment(night){isNight=Boolean(night);apply();}
  function setBackdrop(style){backdropMode=['editor','classic'].includes(style)?style:'editor';apply();}
 
+ function dispose(){
+  scene.remove(fill,glow,skyDome,clouds);
+  glow.geometry.dispose();glowMaterial.dispose();
+  skyDome.geometry.dispose();skyDome.material.dispose();
+  cloudGeo.dispose();cloudMaterial.dispose();
+ }
+
  apply();filter(()=>true);
- return {filter,setEnvironment,setBackdrop,setBounds,glow,fill,skyDome,clouds,get backdrop(){return backdropMode;},get night(){return isNight;}};
+ return {filter,setEnvironment,setBackdrop,setBounds,dispose,glow,fill,skyDome,clouds,get backdrop(){return backdropMode;},get night(){return isNight;}};
 }
