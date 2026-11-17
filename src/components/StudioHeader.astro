@@ -10,12 +10,21 @@ const {active=''} = Astro.props;
     </a>
     <span class="sub">Estúdio de construções</span>
   </div>
-  <label class="build-picker">
-    <span class="sr">Construção</span>
-    <select aria-label="Construção" id="build" data-direct-project={active || undefined}>
-      {studioProjects.map(({id,label,href})=><option value={id} data-href={href} selected={active===id}>{label}</option>)}
-    </select>
-  </label>
+  <div class="picker-group">
+    <label class="category-picker">
+      <span class="sr">Categoria</span>
+      <select aria-label="Categoria" id="category">
+        <option value="builds">Construções</option>
+        <option value="farms">Farms</option>
+      </select>
+    </label>
+    <label class="build-picker">
+      <span class="sr">Construção</span>
+      <select aria-label="Construção" id="build" data-direct-project={active || undefined}>
+        {studioProjects.map(({id,label,href,category})=><option value={id} data-href={href} data-category={category} selected={active===id}>{label}</option>)}
+      </select>
+    </label>
+  </div>
   <div class="head-actions"><slot /></div>
 </header>
 <script>

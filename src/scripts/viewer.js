@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { createBlockRenderer } from './block-renderer.js';
+import { FARM_LABELS, parseFacing } from './redstone-blocks.js';
+import { createFarmDemo } from './farm-demo.js';
 import { createAtmosphere } from './atmosphere.js';
 import { installFlightControls } from './wasd-controls.js';
 import { installTouchpadControls } from './touchpad-controls.js';
@@ -12,6 +14,8 @@ const modelUrls = {
  'andorinha-v1-teste-b': '/model-andorinha-v1-teste-b.json',
  'andorinha-v3': '/model-andorinha-v3.json',
  'andorinha-estudos': '/model-andorinha-estudos.json',
+ 'farm-musgo-v1': '/model-farm-musgo-v1.json',
+ 'farm-musgo': '/model-farm-musgo.json',
 };
 
 const $ = s => document.querySelector(s);
@@ -28,6 +32,9 @@ const front = new THREE.Vector3(...(model.orientation?.front ?? [0, 0, 1])).norm
 
 if (modules.length) {
  $('#part').replaceChildren(new Option('Todas as partes', 'all'), ...modules.map(m => new Option(m.label, m.id)));
+} else if (buildId !== 'bamboo') {
+ $('#part').replaceChildren(new Option('Todas as partes', 'all'));
+ $('#part').disabled = true;
 }
 $('#step').max = blocks.length;
 $('#step').value = blocks.length;
@@ -36,6 +43,7 @@ const counts = new Map();
 for (const b of blocks) counts.set(b.name, (counts.get(b.name) || 0) + 1);
 
 const labels = {
+ ...FARM_LABELS,
  mud_brick_stairs: 'Escada de tijolos de barro', bamboo_trapdoor: 'Alçapão de bambu', bamboo_slab: 'Laje de bambu',
  bamboo_mosaic_slab: 'Laje de mosaico de bambu', bamboo_block: 'Bloco de bambu', birch_slab: 'Laje de bétula',
  mud_bricks: 'Tijolos de barro', stripped_bamboo_block: 'Bloco de bambu descascado', bamboo_stairs: 'Escada de bambu',
@@ -232,56 +240,99 @@ const blockRenderer = await createBlockRenderer(blocks, scene);
 const { batches, icons, materials, failures: textureFailures } = blockRenderer;
 const atmosphere = createAtmosphere(scene, blocks);
 
-// Cushions are Bedrock entities, not replacement blocks. Positions are the
-// saved actor positions, normalized against the same world origin as blocks.
+// Cushions and farm minecarts are Bedrock entities, normalized against worldOrigin.
 let cushionTexture = null;
 let cushionMaterial = null;
 let cushionGeometry = null;
+let minecartMaterial = null;
+let minecartGeometry = null;
 let cushions = [];
+const minecarts = [];
 if (model.entities?.length) {
- try {
-  cushionTexture = await new THREE.TextureLoader().loadAsync('https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/resource_pack/textures/entity/cushion/green_cushion.png');
- } catch {
-  textureFailures.push('entity/cushion/green_cushion.png');
-  const canvas = document.createElement('canvas');
-  canvas.width = canvas.height = 64;
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = '#56751a';
-  ctx.fillRect(0, 0, 64, 64);
-  cushionTexture = new THREE.CanvasTexture(canvas);
+ const originVec = model.worldOrigin ?? [0, 0, 0];
+ const cushionEntities = model.entities.filter(e => !e.identifier || e.identifier.includes('cushion'));
+ const cartEntities = model.entities.filter(e => e.identifier && e.identifier.includes('minecart'));
+
+ if (cushionEntities.length) {
+  try {
+   cushionTexture = await new THREE.TextureLoader().loadAsync('https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/resource_pack/textures/entity/cushion/green_cushion.png');
+  } catch {
+   textureFailures.push('entity/cushion/green_cushion.png');
+   const canvas = document.createElement('canvas');
+   canvas.width = canvas.height = 64;
+   const ctx = canvas.getContext('2d');
+   ctx.fillStyle = '#56751a';
+   ctx.fillRect(0, 0, 64, 64);
+   cushionTexture = new THREE.CanvasTexture(canvas);
+  }
+  cushionTexture.colorSpace = THREE.SRGBColorSpace;
+  cushionTexture.magFilter = THREE.NearestFilter;
+  cushionTexture.minFilter = THREE.NearestFilter;
+  cushionMaterial = new THREE.MeshLambertMaterial({ map: cushionTexture });
+  cushionGeometry = new THREE.BoxGeometry(15.98 / 16, 3.98 / 16, 15.98 / 16);
+  const cushionUV = cushionGeometry.attributes.uv;
+  const cushionRects = [[32, 16, 48, 20], [0, 16, 16, 20], [16, 0, 32, 16], [32, 0, 48, 16], [16, 16, 32, 20], [48, 16, 64, 20]];
+  for (let f = 0; f < 6; f++) {
+   const r = cushionRects[f];
+   for (let j = f * 4; j < f * 4 + 4; j++) {
+    cushionUV.setXY(j, (r[0] + cushionUV.getX(j) * (r[2] - r[0])) / 64, 1 - (r[1] + (1 - cushionUV.getY(j)) * (r[3] - r[1])) / 64);
+   }
+  }
+  cushions = cushionEntities.map(entity => {
+   const [x, y, z] = entity.position;
+   const support = coord.get(`${Math.floor(x) - originVec[0]},${Math.floor(y) - originVec[1]},${Math.floor(z) - originVec[2]}`);
+   if (!support) throw Error('Almofada sem escada de apoio');
+   const mesh = new THREE.Mesh(cushionGeometry, cushionMaterial);
+   mesh.position.set(x - originVec[0], y - originVec[1] - 0.125 / 16 + 3.98 / 32, z - originVec[2]);
+   mesh.rotation.y = -THREE.MathUtils.degToRad(entity.rotation?.[0] ?? 0);
+   mesh.castShadow = true;
+   mesh.receiveShadow = true;
+   scene.add(mesh);
+   return { entity, support, mesh };
+  });
  }
- cushionTexture.colorSpace = THREE.SRGBColorSpace;
- cushionTexture.magFilter = THREE.NearestFilter;
- cushionTexture.minFilter = THREE.NearestFilter;
- cushionMaterial = new THREE.MeshLambertMaterial({ map: cushionTexture });
- cushionGeometry = new THREE.BoxGeometry(15.98 / 16, 3.98 / 16, 15.98 / 16);
- const cushionUV = cushionGeometry.attributes.uv;
- const cushionRects = [[32, 16, 48, 20], [0, 16, 16, 20], [16, 0, 32, 16], [32, 0, 48, 16], [16, 16, 32, 20], [48, 16, 64, 20]];
- for (let f = 0; f < 6; f++) {
-  const r = cushionRects[f];
-  for (let j = f * 4; j < f * 4 + 4; j++) {
-   cushionUV.setXY(j, (r[0] + cushionUV.getX(j) * (r[2] - r[0])) / 64, 1 - (r[1] + (1 - cushionUV.getY(j)) * (r[3] - r[1])) / 64);
+
+ if (cartEntities.length) {
+  minecartMaterial = new THREE.MeshLambertMaterial({ color: 0x5c646d });
+  minecartGeometry = new THREE.BoxGeometry(0.95, 0.56, 0.78);
+  const hopperTopMat = new THREE.MeshLambertMaterial({ color: 0x3f4348 });
+  const hopperTopGeo = new THREE.BoxGeometry(0.76, 0.28, 0.62);
+  const chestTopMat = new THREE.MeshLambertMaterial({ color: 0x9c6e2c });
+  const chestTopGeo = new THREE.BoxGeometry(0.72, 0.34, 0.6);
+  for (const entity of cartEntities) {
+   const [x, y, z] = entity.position;
+   const lx = x - originVec[0], ly = y - originVec[1], lz = z - originVec[2];
+   const group = new THREE.Group();
+   const hull = new THREE.Mesh(minecartGeometry, minecartMaterial);
+   hull.position.set(0, 0.32, 0);
+   hull.castShadow = true;
+   hull.receiveShadow = true;
+   group.add(hull);
+   if (entity.identifier.includes('hopper')) {
+    const top = new THREE.Mesh(hopperTopGeo, hopperTopMat);
+    top.position.set(0, 0.58, 0);
+    top.castShadow = true;
+    group.add(top);
+   } else if (entity.identifier.includes('chest')) {
+    const top = new THREE.Mesh(chestTopGeo, chestTopMat);
+    top.position.set(0, 0.62, 0);
+    top.castShadow = true;
+    group.add(top);
+   }
+   group.position.set(lx, ly, lz);
+   group.rotation.y = -THREE.MathUtils.degToRad(entity.rotation?.[0] ?? 0);
+   scene.add(group);
+   const support = coord.get(`${Math.floor(lx)},${Math.floor(ly)},${Math.floor(lz)}`) ?? coord.get(`${Math.floor(lx)},${Math.floor(ly) - 1},${Math.floor(lz)}`);
+   minecarts.push({ entity, support, localY: Math.floor(ly), mesh: group });
   }
  }
- cushions = model.entities.map(entity => {
-  const [x, y, z] = entity.position, origin = model.worldOrigin;
-  const support = coord.get(`${Math.floor(x) - origin[0]},${Math.floor(y) - origin[1]},${Math.floor(z) - origin[2]}`);
-  if (!support) throw Error('Almofada sem escada de apoio');
-  const mesh = new THREE.Mesh(cushionGeometry, cushionMaterial);
-  mesh.position.set(x - origin[0], y - origin[1] - 0.125 / 16 + 3.98 / 32, z - origin[2]);
-  mesh.rotation.y = -THREE.MathUtils.degToRad(entity.rotation[0]);
-  mesh.castShadow = true;
-  mesh.receiveShadow = true;
-  scene.add(mesh);
-  return { entity, support, mesh };
- });
 }
 
 if (textureFailures.length) {
  $('#texture-status').textContent = `${textureFailures.length} texturas não carregaram. Recarregue para conferir a aparência.`;
 }
 
-const moduleOf = b => b.module ?? (b.z < 14 ? 'north' : b.z > 22 ? 'south' : b.x > 8 ? 'east' : 'house');
+const moduleOf = b => b.module ?? (modules.length || buildId !== 'bamboo' ? 'all' : (b.z < 14 ? 'north' : b.z > 22 ? 'south' : b.x > 8 ? 'east' : 'house'));
 let part = 'all';
 let mode = 'all';
 let step = blocks.length;
@@ -366,6 +417,8 @@ function drawMaterials() {
  materialsDirty = false;
 }
 
+let demoHiddenSet = null;
+
 function isBlockVisible(b) {
  if (part !== 'all' && moduleOf(b) !== part) return false;
  if (mode === 'all') return true;
@@ -373,12 +426,24 @@ function isBlockVisible(b) {
  return b.y <= step;
 }
 
-function update() {
- const scoped = scopedCache;
- const accepts = isBlockVisible;
+function isRenderedBlockVisible(b) {
+ return isBlockVisible(b) && (!demoHiddenSet || !demoHiddenSet.has(b));
+}
+
+function syncFilteredMeshes() {
+ const accepts = isRenderedBlockVisible;
  blockRenderer.filter(accepts);
  atmosphere.filter(accepts);
  for (let i = 0; i < cushions.length; i++) cushions[i].mesh.visible = accepts(cushions[i].support);
+ for (let i = 0; i < minecarts.length; i++) {
+  const mc = minecarts[i];
+  mc.mesh.visible = mc.support ? accepts(mc.support) : (mode !== 'layer' || mc.localY <= step);
+ }
+}
+
+function update() {
+ const scoped = scopedCache;
+ syncFilteredMeshes();
  let visible = 0;
  if (mode === 'all') {
   visible = scoped.length;
@@ -520,13 +585,38 @@ function showSelection(b) {
   world.textContent = `Mundo: X ${origin[0] + b.x}, Y ${origin[1] + b.y}, Z ${origin[2] + b.z}`;
   details.append(world);
  }
- const st = b.states, descriptions = [];
+ const st = b.states || {}, descriptions = [];
+ const dirNamesPT = { down: 'baixo', up: 'cima', north: 'norte', south: 'sul', west: 'oeste', east: 'leste' };
  if (st['minecraft:vertical_half']) descriptions.push(st['minecraft:vertical_half'] === 'top' ? 'metade superior' : 'metade inferior');
  if ('open_bit' in st) descriptions.push(st.open_bit ? 'aberto' : 'fechado');
  if ('upside_down_bit' in st) descriptions.push(st.upside_down_bit ? 'invertido' : 'normal');
  if (st.pillar_axis) descriptions.push('eixo ' + st.pillar_axis.toUpperCase());
  if (st['minecraft:corner'] && st['minecraft:corner'] !== 'none') descriptions.push('canto ' + st['minecraft:corner']);
  if (st.hanging) descriptions.push('pendurada');
+ if ('facing_direction' in st || 'minecraft:facing_direction' in st) {
+  const d = parseFacing(st['minecraft:facing_direction'] ?? st.facing_direction, '');
+  if (d) descriptions.push('aponta para ' + (dirNamesPT[d] || d));
+ }
+ if (st['minecraft:cardinal_direction']) {
+  const cd = st['minecraft:cardinal_direction'];
+  descriptions.push('direção ' + (dirNamesPT[cd] || cd));
+ }
+ if (st.torch_facing_direction) descriptions.push('fixada em ' + (st.torch_facing_direction === 'top' ? 'topo' : (dirNamesPT[st.torch_facing_direction] || st.torch_facing_direction)));
+ if (st['minecraft:block_face']) descriptions.push('face ' + (dirNamesPT[st['minecraft:block_face']] || st['minecraft:block_face']));
+ if (st.orientation) descriptions.push('orientação ' + st.orientation);
+ if ('repeater_delay' in st) descriptions.push(`atraso ${(st.repeater_delay ?? 0) + 1} tick(s) redstone`);
+ if ('output_subtract_bit' in st) descriptions.push(st.output_subtract_bit ? 'modo subtração' : 'modo comparação');
+ if ('redstone_signal' in st) descriptions.push(`sinal ${st.redstone_signal}/15`);
+ if (st.powered_bit) descriptions.push('energizado');
+ if (st.lit) descriptions.push('aceso');
+ if (st.triggered_bit) descriptions.push('acionado');
+ if (st.toggle_bit) descriptions.push(b.name === 'minecraft:hopper' ? 'travado' : 'alternado');
+ if ('rail_direction' in st) descriptions.push('trilho dir. ' + st.rail_direction + (st.rail_data_bit ? ' (ativo)' : ''));
+ if ('composter_fill_level' in st) descriptions.push(`nível ${st.composter_fill_level}/8`);
+ if (st.lever_direction) descriptions.push('alavanca ' + st.lever_direction);
+ if ('liquid_depth' in st) descriptions.push(st.liquid_depth === 0 ? 'bloco fonte' : `fluxo prof. ${st.liquid_depth}`);
+ if ('age' in st) descriptions.push(`estágio ${st.age}`);
+ if (b.waterlogged) descriptions.push('alagado (waterlogged)');
  if (descriptions.length) {
   const state = document.createElement('small');
   state.textContent = descriptions.join(' · ');
@@ -696,9 +786,80 @@ $('#theme').onclick = () => {
 if ($('#backdrop')) $('#backdrop').onchange = () => syncEnvironment();
 syncEnvironment(false);
 
+let farmDemo = null;
+const isFarm = Boolean(model.demo) || $('#build').selectedOptions[0]?.dataset.category === 'farms';
+if (isFarm) {
+ $('#theme').hidden = true;
+ document.body.classList.remove('dark');
+ if ($('#backdrop')) $('#backdrop').value = 'editor';
+ syncEnvironment(false);
+}
+if (model.bedrockNotes?.summary && $('.note')) {
+ $('.note').textContent = model.bedrockNotes.summary + (model.bedrockNotes.taxaInfo ? ' ' + model.bedrockNotes.taxaInfo : '');
+}
+if (model.demo) {
+ const bar = $('#portal-controls');
+ bar.hidden = false;
+ const demoBtn = document.createElement('button');
+ demoBtn.type = 'button';
+ demoBtn.id = 'demo-toggle';
+ demoBtn.setAttribute('aria-pressed', 'false');
+ demoBtn.textContent = 'Demonstração funcional';
+ const stepBtn = document.createElement('button');
+ stepBtn.type = 'button';
+ stepBtn.id = 'demo-step';
+ stepBtn.textContent = 'Próximo passo';
+ const statusEl = document.createElement('span');
+ statusEl.id = 'demo-status';
+ statusEl.className = 'mechanism-hint';
+ statusEl.textContent = 'Modo inspeção estática · clique em "Demonstração funcional" para animar o ciclo Redstone Bedrock.';
+ bar.replaceChildren(demoBtn, stepBtn, statusEl);
+ farmDemo = createFarmDemo({
+  scene,
+  blockRenderer,
+  model,
+  onFrame: invalidate,
+  onHideBlocks(hidden) {
+   demoHiddenSet = hidden && hidden.size ? hidden : null;
+   syncFilteredMeshes();
+   renderer.shadowMap.needsUpdate = true;
+   invalidate();
+  },
+  onPhase(phase) {
+   demoBtn.setAttribute('aria-pressed', String(Boolean(farmDemo?.running)));
+   demoBtn.textContent = farmDemo?.running ? 'Pausar demonstração' : 'Demonstração funcional';
+   statusEl.textContent = phase
+    ? phase.label
+    : 'Modo inspeção estática · clique em "Demonstração funcional" para animar o ciclo Redstone Bedrock.';
+  },
+ });
+ const resetFullViewForDemo = () => {
+  if (part !== 'all' || mode !== 'all') {
+   part = 'all';
+   mode = 'all';
+   $('#part').value = 'all';
+   $('#mode').value = 'all';
+   rebuildScope();
+   $('#step').max = blocks.length;
+   step = blocks.length;
+   $('#step').value = step;
+   update();
+  }
+ };
+ demoBtn.onclick = async () => {
+  resetFullViewForDemo();
+  await farmDemo.toggle();
+ };
+ stepBtn.onclick = async () => {
+  resetFullViewForDemo();
+  await farmDemo.stepNext();
+ };
+}
+
 function fitPart() { $('#view').value = 'perspective'; setView('perspective'); }
 
 $('#part').onchange = e => {
+ farmDemo?.stop();
  part = e.target.value;
  rebuildScope();
  const max = mode === 'layer' ? height - 1 : scopedCache.length;
@@ -709,6 +870,7 @@ $('#part').onchange = e => {
  fitPart();
 };
 $('#mode').onchange = e => {
+ farmDemo?.stop();
  mode = e.target.value;
  const range = $('#step');
  range.max = mode === 'layer' ? height - 1 : scopedCache.length;
@@ -778,7 +940,10 @@ function dispose() {
  cushionGeometry?.dispose();
  cushionMaterial?.dispose();
  cushionTexture?.dispose();
+ minecartGeometry?.dispose();
+ minecartMaterial?.dispose();
  atmosphere.dispose();
+ farmDemo?.dispose();
  blockRenderer.dispose();
  renderer.dispose();
 }

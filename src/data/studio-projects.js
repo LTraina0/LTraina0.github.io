@@ -12,5 +12,7 @@ export const studioProjects=[
   {id:'telhado-oriental',label:'Telhado oriental · Laboratório'},
   {id:'atelier-02',label:'Ateliê de arquitetura · 0.2'},
   {id:'fachada-021',label:'Fachada integrada · 0.2.1'},
-  {id:'fachada-022',label:'Fachada refinada · 0.2.2',href:'/?build=fachada-022&study=refined'}
-].map(project=>({...project,href:project.href||'/?build='+project.id}));
+ {id:'fachada-022',label:'Fachada refinada · 0.2.2',href:'/?build=fachada-022&study=refined'},
+ {id:'farm-musgo-v1',label:'Farm de Musgo · V1 (Base 7×7)',category:'farms'},
+ {id:'farm-musgo',label:'Farm de Musgo · v3 (Gerador de Pedra · Bedrock)',category:'farms'}
+].map(project=>({...project,category:project.category||'builds',href:project.href||'/?build='+project.id}));

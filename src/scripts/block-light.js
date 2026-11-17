@@ -18,12 +18,27 @@ const LIGHT_SOURCE_NAMES = new Set([
  'minecraft:pearlescent_froglight',
  'minecraft:glowstone',
  'minecraft:glow_lichen',
+ 'minecraft:redstone_torch',
+ 'minecraft:copper_torch',
+ 'minecraft:soul_torch',
+ 'minecraft:lit_redstone_lamp',
+ 'minecraft:lava',
+ 'minecraft:flowing_lava',
+ 'minecraft:magma',
+ 'minecraft:sea_lantern',
+ 'minecraft:amethyst_cluster',
+ 'minecraft:large_amethyst_bud',
+ 'minecraft:medium_amethyst_bud',
+ 'minecraft:small_amethyst_bud',
+ 'minecraft:ice_crystal',
+ 'minecraft:sculk_catalyst',
 ]);
 
 function isLightSource(b) {
  return (
   LIGHT_SOURCE_NAMES.has(b.name) ||
   (b.name.endsWith('_candle') && b.states?.lit) ||
+  (b.name.endsWith('copper_bulb') && b.states?.lit) ||
   (b.name === 'minecraft:sea_pickle' && !b.states?.dead_bit)
  );
 }
@@ -119,14 +134,22 @@ export function createBlockLight(blocks, parts, materials, options = {}) {
  const sourceBaseCells = new Int32Array(sources.length);
  for (let i = 0; i < sources.length; i++) {
   const b = sources[i];
-  sourceLevels[i] =
-   b.name === 'minecraft:glow_lichen'
-    ? 14
-    : b.name.endsWith('_candle')
-     ? 16 + Math.min(6, (b.states?.candles ?? 0) * 2)
-     : b.name === 'minecraft:torch'
-      ? 28
-      : 30;
+  let lvl = 30;
+  if (b.name === 'minecraft:glow_lichen') lvl = 14;
+  else if (b.name.endsWith('_candle')) lvl = 16 + Math.min(6, (b.states?.candles ?? 0) * 2);
+  else if (b.name === 'minecraft:torch' || b.name === 'minecraft:copper_torch' || b.name === 'minecraft:ice_crystal') lvl = 28;
+  else if (b.name === 'minecraft:soul_torch') lvl = 20;
+  else if (b.name === 'minecraft:redstone_torch') lvl = 14;
+  else if (b.name === 'minecraft:sculk_catalyst') lvl = 12;
+  else if (b.name === 'minecraft:amethyst_cluster') lvl = 10;
+  else if (b.name === 'minecraft:large_amethyst_bud') lvl = 8;
+  else if (b.name === 'minecraft:magma') lvl = 6;
+  else if (b.name === 'minecraft:medium_amethyst_bud') lvl = 4;
+  else if (b.name === 'minecraft:small_amethyst_bud') lvl = 2;
+  else if (b.name.endsWith('copper_bulb')) {
+   lvl = b.name.includes('oxidized') ? 8 : b.name.includes('weathered') ? 16 : b.name.includes('exposed') ? 24 : 30;
+  }
+  sourceLevels[i] = lvl;
   sourceBaseCells[i] =
    (b.x - min[0]) * scale +
    (b.y - min[1]) * scale * strideY +

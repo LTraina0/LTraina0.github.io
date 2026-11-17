@@ -2,10 +2,25 @@ import * as T from 'three';
 import { TGALoader } from 'three/examples/jsm/loaders/TGALoader.js';
 import { canonicalStairParts, stairFacing } from './geometry.js';
 import { createBlockLight } from './block-light.js';
+import {
+ FARM_TEXTURE_FILES,
+ FARM_TEXTURE_ALIASES,
+ FARM_MATERIAL_TINTS,
+ FARM_CUT_KEYS,
+ FARM_GLASS_KEYS,
+ FARM_EMISSIVE_SPECS,
+ FARM_NIGHT_EMISSIVE_KEYS,
+ FARM_ITEM_ICON_FILES,
+ FARM_LOG_MAP,
+ buildFarmPart,
+ computeWireMask,
+ farmKeyOf,
+} from './redstone-blocks.js';
 
 const ROOT = 'https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.26.60.5/resource_pack/textures/';
 
 const TEXTURE_FILES = {
+ ...FARM_TEXTURE_FILES,
  mud: 'blocks/mud_bricks.png',
  birch: 'blocks/planks_birch.png',
  bamboo: 'blocks/bamboo_planks.png',
@@ -139,14 +154,17 @@ const CUT_KEYS = new Set([
  'lantern', 'soulLantern', 'copperLantern', 'exposedCopperLantern', 'weatheredCopperLantern', 'oxidizedCopperLantern',
  'whiteCandle', 'whiteCandleLit', 'lightGrayCandle', 'lightGrayCandleLit',
  'seaPickle', 'glowLichen',
+ ...FARM_CUT_KEYS,
 ]);
 
 const GLASS_KEYS = new Set([
  'brownGlass', 'clearGlass', 'tintedGlass', 'lightGrayGlass', 'pinkGlass',
  'whiteGlass', 'redGlass', 'orangeGlass', 'magentaGlass', 'purpleGlass', 'yellowGlass',
+ ...FARM_GLASS_KEYS,
 ]);
 
 const ITEM_ICON_FILES = {
+ ...FARM_ITEM_ICON_FILES,
  lantern: 'items/lantern.png',
  soul_lantern: 'items/soul_lantern.png',
  copper_lantern: 'items/copper_lantern.png',
@@ -180,11 +198,13 @@ const FULL_EMISSIVE_SPECS = {
  glowLichen: { color: '#9be8d0', intensity: 0.22 },
  whiteCandleLit: { color: '#ffbb66', intensity: 0.25 },
  lightGrayCandleLit: { color: '#ffbb66', intensity: 0.25 },
+ ...FARM_EMISSIVE_SPECS,
 };
 
 const NIGHT_EMISSIVE_KEYS = [
  'froglight', 'froglightTop', 'pearlescentFroglight', 'pearlescentFroglightTop',
  'glowLichen', 'whiteCandleLit', 'lightGrayCandleLit',
+ ...FARM_NIGHT_EMISSIVE_KEYS,
 ];
 
 const V = {
@@ -193,9 +213,11 @@ const V = {
  east: new T.Vector3(1, 0, 0),
  west: new T.Vector3(-1, 0, 0),
  up: new T.Vector3(0, 1, 0),
+ down: new T.Vector3(0, -1, 0),
 };
 
 const LOG_MAP = {
+ ...FARM_LOG_MAP,
  bamboo_block: ['log', 'logTop'],
  stripped_bamboo_block: ['stripped', 'strippedTop'],
  stripped_birch_log: ['birchLog', 'birchLogTop'],
@@ -279,7 +301,7 @@ const keyOf = n =>
  n.includes('purple_stained_glass') ? 'purpleGlass' :
  n.includes('yellow_stained_glass') ? 'yellowGlass' :
  n === 'glowstone' ? 'glowstone' :
- n.includes('oak') ? 'wood' : 'bamboo';
+ (farmKeyOf(n) || (n.includes('oak') ? 'wood' : 'bamboo'));
 
 const NIGHT_LIGHT_LUT = new Float64Array(31);
 for (let l = 1; l <= 30; l++) NIGHT_LIGHT_LUT[l] = Math.pow(0.65, (30 - l) / 2);
@@ -340,6 +362,8 @@ function extractGroupSlice(g, start, count) {
 
 export async function createBlockRenderer(blocks, scene) {
  const textureFiles = { ...TEXTURE_FILES };
+ const textureAliases = { ...FARM_TEXTURE_ALIASES };
+ const materialTints = { ...FARM_MATERIAL_TINTS };
  const cutKeys = new Set(CUT_KEYS);
  const glassKeys = new Set(GLASS_KEYS);
  const emissiveSpecs = { ...FULL_EMISSIVE_SPECS };
@@ -356,7 +380,7 @@ export async function createBlockRenderer(blocks, scene) {
  const textureLoader = new T.TextureLoader();
  let tgaLoader = null;
 
- function box(bounds, keys, rects) {
+ function box(bounds, keys, rects, uvScale = 16) {
   const [x0, y0, z0, x1, y1, z1] = bounds;
   const g = new T.BoxGeometry((x1 - x0) / 16, (y1 - y0) / 16, (z1 - z0) / 16);
   g.translate((x0 + x1) / 32, (y0 + y1) / 32, (z0 + z1) / 32);
@@ -372,7 +396,7 @@ export async function createBlockRenderer(blocks, scene) {
   for (let f = 0; f < 6; f++) {
    const r = rects?.[f] || defaults[f];
    for (let j = f * 4; j < f * 4 + 4; j++) {
-    uv.setXY(j, (r[0] + uv.getX(j) * (r[2] - r[0])) / 16, 1 - (r[1] + (1 - uv.getY(j)) * (r[3] - r[1])) / 16);
+    uv.setXY(j, (r[0] + uv.getX(j) * (r[2] - r[0])) / uvScale, 1 - (r[1] + (1 - uv.getY(j)) * (r[3] - r[1])) / uvScale);
    }
   }
   const isFullBox = x0 === 0 && y0 === 0 && z0 === 0 && x1 === 16 && y1 === 16 && z1 === 16;
@@ -412,9 +436,64 @@ export async function createBlockRenderer(blocks, scene) {
   return partsList;
  }
 
- function parts(b) {
+ function tiltTorch(outList, d) {
+  const dir = V[d];
+  if (!dir) return;
+  _upVec.set(-dir.x * 0.5, 1, -dir.z * 0.5).normalize();
+  _rotQuat.setFromUnitVectors(V.up, _upVec);
+  for (const p of outList) {
+   p.g.translate(-0.5, -0.5, -0.5);
+   p.g.applyQuaternion(_rotQuat);
+   p.g.translate(0.5 + dir.x * 0.3, 0.7, 0.5 + dir.z * 0.3);
+  }
+ }
+
+ const _axisY = new T.Vector3(0, 1, 0);
+ let wireCoordMap = null;
+ let wireOpaqueSet = null;
+ function wireMaskFor(b) {
+  if (!wireCoordMap || b.name !== 'minecraft:redstone_wire') return 0;
+  return computeWireMask(
+   b,
+   (x, y, z) => wireCoordMap.get(`${x},${y},${z}`),
+   (x, y, z) => wireOpaqueSet.has(`${x},${y},${z}`)
+  );
+ }
+ const CHEST_RIGHT_VEC = { south: [1, 0], north: [-1, 0], east: [0, -1], west: [0, 1] };
+ function isMergeableChest(name) {
+  return name === 'minecraft:chest' || name === 'minecraft:trapped_chest' || name.endsWith('copper_chest');
+ }
+ function chestPairFor(b) {
+  if (!wireCoordMap || !isMergeableChest(b.name)) return 'single';
+  const dir = b.states?.['minecraft:cardinal_direction'] || 'south';
+  const [dx, dz] = CHEST_RIGHT_VEC[dir] || [1, 0];
+  const rightNeighbor = wireCoordMap.get(`${b.x + dx},${b.y},${b.z + dz}`);
+  if (rightNeighbor && rightNeighbor.name === b.name && (rightNeighbor.states?.['minecraft:cardinal_direction'] || 'south') === dir) {
+   return 'left';
+  }
+  const leftNeighbor = wireCoordMap.get(`${b.x - dx},${b.y},${b.z - dz}`);
+  if (leftNeighbor && leftNeighbor.name === b.name && (leftNeighbor.states?.['minecraft:cardinal_direction'] || 'south') === dir) {
+   return 'right';
+  }
+  return 'single';
+ }
+
+ function parts(b, extra = {}) {
   const n = b.name.split(':')[1], uw = unwax(n), s = b.states || {}, out = [], key = keyOf(n);
-  const add = (bounds, k = key, uv) => out.push(box(bounds, k, uv));
+  const add = (bounds, k = key, uv, uvScale = 16) => out.push(box(bounds, k, uv, uvScale));
+  const resolvedExtra = { ...extra };
+  if (resolvedExtra.wireMask === undefined && b.name === 'minecraft:redstone_wire') {
+   resolvedExtra.wireMask = wireMaskFor(b);
+  }
+  if (resolvedExtra.chestPair === undefined && isMergeableChest(b.name)) {
+   resolvedExtra.chestPair = chestPairFor(b);
+  }
+  const farmHelpers = { box, plane, rotate, orient, out, PlaneGeometry: T.PlaneGeometry, axisX: _rotAxisX, axisY: _axisY, tiltTorch };
+  if (buildFarmPart(b, farmHelpers, resolvedExtra)) {
+   if (b.waterlogged) out.push(box([0, 0, 0, 16, 14, 16], 'water'));
+   return out;
+  }
+  const built = (() => {
   if (LOG_MAP[n]) {
    const [side, top] = LOG_MAP[n];
    add([0, 0, 0, 16, 16, 16], [side, side, top, top, side, side]);
@@ -571,16 +650,7 @@ export async function createBlockRenderer(blocks, scene) {
   if (n === 'torch') {
    add([7, 0, 7, 9, 10, 9], 'torch', [[7, 6, 9, 16], [7, 6, 9, 16], [7, 6, 9, 8], [7, 14, 9, 16], [7, 6, 9, 16], [7, 6, 9, 16]]);
    const d = s.torch_facing_direction;
-   if (d && d !== 'top') {
-    const dir = V[d];
-    _upVec.set(-dir.x * 0.5, 1, -dir.z * 0.5).normalize();
-    _rotQuat.setFromUnitVectors(V.up, _upVec);
-    for (const p of out) {
-     p.g.translate(-0.5, -0.5, -0.5);
-     p.g.applyQuaternion(_rotQuat);
-     p.g.translate(0.5 + dir.x * 0.3, 0.7, 0.5 + dir.z * 0.3);
-    }
-   }
+   if (d && d !== 'top') tiltTorch(out, d);
    return out;
   }
   if (n === 'scaffolding') { add([0, 0, 0, 16, 16, 16], ['scaffold', 'scaffold', 'scaffoldTop', 'scaffoldBottom', 'scaffold', 'scaffold']); return out; }
@@ -593,6 +663,9 @@ export async function createBlockRenderer(blocks, scene) {
   }
   add([0, 0, 0, 16, 16, 16], n === 'shroomlight' ? 'shroom' : key);
   return out;
+  })();
+  if (b.waterlogged) built.push(box([0, 0, 0, 16, 14, 16], 'water'));
+  return built;
  }
 
  // --- Lazy texture & material registry (extensible for future Redstone blocks) ---
@@ -611,8 +684,9 @@ export async function createBlockRenderer(blocks, scene) {
  }
 
  function attachEmissive(key, mat) {
-  const tex = textures[key];
-  const img = images[key];
+  const texKey = textureAliases[key] || key;
+  const tex = textures[texKey];
+  const img = images[texKey];
   if (LANTERN_MASK_KEYS.has(key)) {
    const isSoul = key === 'soulLantern';
    const c = document.createElement('canvas');
@@ -720,17 +794,20 @@ export async function createBlockRenderer(blocks, scene) {
 
  async function ensureMaterial(key) {
   if (materials[key]) return materials[key];
-  const tx = await ensureTexture(key);
+  const texKey = textureAliases[key] || key;
+  const tx = await ensureTexture(texKey);
   if (materials[key]) return materials[key];
   const cut = cutKeys.has(key);
   const glass = glassKeys.has(key);
+  const tint = materialTints[key];
   const mat = new T.MeshLambertMaterial({
    map: tx,
+   color: tint ? new T.Color(tint) : 0xffffff,
    vertexColors: true,
    alphaTest: cut ? 0.5 : 0,
    side: cut || glass ? T.DoubleSide : T.FrontSide,
    transparent: glass,
-   opacity: glass ? 0.78 : 1,
+   opacity: glass ? (key === 'water' ? 0.58 : 0.78) : 1,
    depthWrite: !glass,
   });
   applyNightShader(mat);
@@ -743,8 +820,10 @@ export async function createBlockRenderer(blocks, scene) {
   await Promise.all([...keys].map(k => ensureMaterial(k)));
  }
 
- function registerAssets({ textures: extraFiles, cut, glass, emissive } = {}) {
+ function registerAssets({ textures: extraFiles, aliases, tints, cut, glass, emissive } = {}) {
   if (extraFiles) Object.assign(textureFiles, extraFiles);
+  if (aliases) Object.assign(textureAliases, aliases);
+  if (tints) Object.assign(materialTints, tints);
   if (cut) for (const k of cut) cutKeys.add(k);
   if (glass) for (const k of glass) glassKeys.add(k);
   if (emissive) Object.assign(emissiveSpecs, emissive);
@@ -755,11 +834,14 @@ export async function createBlockRenderer(blocks, scene) {
  const neededMaterialKeys = new Set();
  const uniqueBlockNames = new Map();
 
- function getTemplate(b) {
-  const sig = b.name + '|' + stableStateKey(b.states);
+ function getTemplate(b, extra = {}) {
+  const wireSuffix = b.name === 'minecraft:redstone_wire' && extra.wireMask !== undefined ? '|w=' + extra.wireMask : '';
+  const chestSuffix = extra.chestPair && extra.chestPair !== 'single' ? '|cp=' + extra.chestPair : '';
+  const wlSuffix = b.waterlogged ? '|wl=1' : '';
+  const sig = b.name + '|' + stableStateKey(b.states) + wireSuffix + chestSuffix + wlSuffix;
   let tpl = templateCache.get(sig);
   if (tpl) return tpl;
-  const partList = parts(b);
+  const partList = parts(b, extra);
   const isFullCube = partList.length === 1 && partList[0].isFullBox;
   let isOpaqueCube = isFullCube;
   if (isOpaqueCube) {
@@ -777,7 +859,7 @@ export async function createBlockRenderer(blocks, scene) {
    const g = part.g;
    g.computeBoundingBox();
    g.computeBoundingSphere();
-   const isSolidPart = part.keys.every(k => !cutKeys.has(k));
+   const isSolidPart = part.keys.every(k => !cutKeys.has(k) && (k === 'tintedGlass' || !glassKeys.has(k)));
    if (isSolidPart) {
     const a = g.boundingBox.min, c = g.boundingBox.max;
     for (let x = 0; x < 2; x++) {
@@ -815,11 +897,31 @@ export async function createBlockRenderer(blocks, scene) {
 
  const blockTemplates = new Array(blocks.length);
  const blockIndexMap = new Map();
+ let needsNeighborPass = false;
  for (let i = 0; i < blocks.length; i++) {
   const b = blocks[i];
   blockIndexMap.set(b, i);
-  blockTemplates[i] = getTemplate(b);
   if (!uniqueBlockNames.has(b.name)) uniqueBlockNames.set(b.name, b);
+  if (b.name === 'minecraft:redstone_wire' || isMergeableChest(b.name)) needsNeighborPass = true;
+  else blockTemplates[i] = getTemplate(b);
+ }
+ if (needsNeighborPass) {
+  wireCoordMap = new Map();
+  wireOpaqueSet = new Set();
+  for (let i = 0; i < blocks.length; i++) {
+   const b = blocks[i];
+   const ck = `${b.x},${b.y},${b.z}`;
+   wireCoordMap.set(ck, b);
+   if (blockTemplates[i]?.isOpaqueCube) wireOpaqueSet.add(ck);
+  }
+  for (let i = 0; i < blocks.length; i++) {
+   const b = blocks[i];
+   if (b.name === 'minecraft:redstone_wire') {
+    blockTemplates[i] = getTemplate(b, { wireMask: wireMaskFor(b) });
+   } else if (isMergeableChest(b.name)) {
+    blockTemplates[i] = getTemplate(b, { chestPair: chestPairFor(b) });
+   }
+  }
  }
 
  // Collect icon templates only for blocks without flat item icons.
@@ -831,7 +933,7 @@ export async function createBlockRenderer(blocks, scene) {
    continue;
   }
   const sample = inventoryBlock(sampleBlock);
-  const sampleParts = parts(sample);
+  const sampleParts = parts(sample, { wireMask: 0, chestPair: 'single' });
   for (const p of sampleParts) {
    for (const k of p.keys) neededMaterialKeys.add(k);
   }
@@ -1255,7 +1357,10 @@ export async function createBlockRenderer(blocks, scene) {
   for (const [key, m] of Object.entries(materials)) {
    iconMaterials[key] = new T.MeshBasicMaterial({
     map: m.map,
+    color: m.color,
     alphaTest: m.alphaTest,
+    transparent: m.transparent,
+    opacity: m.opacity,
     side: m.side,
     vertexColors: true,
     toneMapped: false,
@@ -1354,5 +1459,25 @@ export function inventoryBlock(b) {
  if (n === 'barrel') Object.assign(states, { facing_direction: 1, open_bit: 0 });
  if (n.endsWith('_door')) Object.assign(states, { 'minecraft:cardinal_direction': 'north', open_bit: 0, upper_block_bit: 0 });
  if (n === 'glow_lichen') states.multi_face_direction_bits = 4;
- return { ...b, states };
+ if (n === 'piston' || n === 'sticky_piston') states.facing_direction = 1;
+ if (n === 'dispenser' || n === 'dropper') states.facing_direction = 3;
+ if (n === 'observer') Object.assign(states, { 'minecraft:facing_direction': 'south', powered_bit: 0 });
+ if (n === 'crafter') Object.assign(states, { orientation: 'south_up', crafting: 0, triggered_bit: 0 });
+ if (n === 'hopper') Object.assign(states, { facing_direction: 0, toggle_bit: 0 });
+ if (n === 'chest' || n === 'trapped_chest' || n === 'ender_chest' || uw.endsWith('copper_chest')) states['minecraft:cardinal_direction'] = 'south';
+ if (n === 'chiseled_bookshelf') Object.assign(states, { direction: 0, books_stored: 0 });
+ if (n === 'redstone_torch' || n === 'unlit_redstone_torch' || n === 'copper_torch' || n === 'soul_torch') states.torch_facing_direction = 'top';
+ if (n.endsWith('_repeater')) Object.assign(states, { 'minecraft:cardinal_direction': 'north', repeater_delay: 0 });
+ if (n.endsWith('_comparator')) Object.assign(states, { 'minecraft:cardinal_direction': 'north', output_lit_bit: 0, output_subtract_bit: 0 });
+ if (n === 'lever') Object.assign(states, { lever_direction: 'up_north_south', open_bit: 0 });
+ if (n.endsWith('_button')) Object.assign(states, { facing_direction: 1, button_pressed_bit: 0 });
+ if (n === 'composter') states.composter_fill_level = 0;
+ if (n === 'rail' || n === 'golden_rail' || n === 'detector_rail' || n === 'activator_rail') Object.assign(states, { rail_direction: 0, rail_data_bit: 0 });
+ if (n === 'amethyst_cluster' || n.endsWith('_amethyst_bud')) states['minecraft:block_face'] = 'up';
+ if (n === 'calibrated_sculk_sensor' || n === 'sculk_sensor') Object.assign(states, { 'minecraft:cardinal_direction': 'south', sculk_sensor_phase: 0 });
+ if (uw.endsWith('lightning_rod')) Object.assign(states, { facing_direction: 1, powered_bit: 0 });
+ if (n === 'rose_bush' || n === 'peony' || n === 'lilac' || n === 'sunflower') states.upper_block_bit = 1;
+ if (n === 'cocoa') Object.assign(states, { direction: 0, age: 2 });
+ if (uw.endsWith('copper_bulb')) Object.assign(states, { lit: 0, powered_bit: 0 });
+ return { ...b, states, waterlogged: false };
 }
